@@ -4,7 +4,7 @@
     简单说明一下isic这个软件，软件安装后有tcpsic、esic、icmpsic、udpsic和isic5种操作命令。各种命令操作主要是发送该类型的报文为主，isic主要是各种ip报文，可以选择各种ip报文字段中的内容的比例，例如IP协议版本、选项字段等。注意所有发送报文的速率跟网卡有关，不能控制发送报文的速率，可以控制每秒发送报文的个数来控制发送的流量。
 ```
 
-1. tcpsic
+1.   tcpsic
 
 `usage: tcpsic [-v] [-D] -s [,port] -d [,port]`
 
@@ -76,7 +76,7 @@
     向10.10.10.100这个地址发送100个源地址为10.10.10.10，源端口为23，目的端口随机，报文内容的seed编号为103334的报文
 ```
 
-1. esic
+2.  esic
 
 `usage: esic -i interface [-s ] [-d ]`
 
@@ -120,7 +120,7 @@
 从eth0口发出10000个seed编号123内容，目的MAC为02:de:ad:be:ef:40的报文。默认的源MAC为接口MAC地址。
 ```
 
-1. icmpsic
+3.  icmpsic
 
 `usage: icmpsic [-v] [-D] -s [,port] -d [,port]`
 
@@ -200,7 +200,7 @@
 
     `Wrote 10 packets in 0.00s @ 2999.40 pkts/s`
 
-1. udpsic
+4.  udpsic
 
 `usage: udpsic [-v] [-D] -s [,port] -d [,port]`
 
@@ -276,7 +276,7 @@
 
     `Wrote 100 packets in 0.01s @ 15835.31 pkts/s`
 
-1. isic
+5.  isic
 
 `usage: isic [-v] [-D] -s -d`
 
