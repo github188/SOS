@@ -1,6 +1,8 @@
 #### 已知缺陷\(issue\)
 
-**bug1：进入sos ftp服务器时，其中sangfor目录无法进入版本：SOS\(v0.0.1 Beta\)**
+**bug1：进入sos ftp服务器时，其中sangfor目录无法进入**
+
+版本：SOS\(v0.0.1 Beta\)
 
 原因：ftp不支持软链接
 
@@ -17,6 +19,8 @@ mkdir /sos/server/feitp-server/REV/sangfor
 mount --bind /sangfor /sos/server/feitp-server/REV/sangfor
 
 **bug2：/etc/resolv.conf修改后，重启后被恢复为8.8.8.8**
+
+版本：SOS\(v0.0.1 Beta\)
 
 原因：启动脚本做了恢复，以保证dns 8.8.8.8的正常
 
