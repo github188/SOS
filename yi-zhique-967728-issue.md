@@ -18,6 +18,8 @@ mkdir /sos/server/feitp-server/REV/sangfor
 
 mount --bind /sangfor /sos/server/feitp-server/REV/sangfor
 
+说明：mount --bind是linux内核从2.4.0开始支持的，可以把一部分文件系统挂载到文件系统中的其他位置，不需要设置，卸载的话，直接umount 全路径，如/sos/server/feitp-server/REV/sangfor
+
 **bug2：/etc/resolv.conf修改后，重启后被恢复为8.8.8.8**
 
 版本：SOS\(v0.0.1 Beta\)
