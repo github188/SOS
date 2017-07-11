@@ -11,4 +11,5 @@
 * [curl-loader使用](curl-loadershi-yong.md)
 * [暂未发布特性](zan-wei-fa-bu-te-xing.md)
 * [常见问题\(Q&A\)](chang-jian-wen-989828-q-and-a.md)
+* [已知缺陷\(issue\)](yi-zhique-967728-issue.md)
 
