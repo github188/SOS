@@ -8,5 +8,6 @@
 * [使用场景\(容器云:多ip负载场景\)](shi-yong-chang-666f28-rong-qi-4e913a-duo-ip-fu-zai-chang-666f29.md)
 * [iperf使用](chapter1.md)
 * [isic使用](isicshi-yong.md)
-* SOS环境准备
+* [SOS环境准备](soshuan-jing-zhun-bei.md)
+* [curl-loader使用](curl-loadershi-yong.md)
 
