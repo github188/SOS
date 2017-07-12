@@ -4,7 +4,7 @@
 
 需求：1000并发\(此为演示，实际并发支持很高\)
 
-环境：eth1已up，web服务器IP为:66.66.66.66/8
+环境：eth1已up，web服务器IP为:66.66.66.66/8\(若使用sos作为服务端，则默认带HTTP服务\)
 
 步骤：
 
@@ -75,6 +75,8 @@ while :; do netstat -anp\|grep EST\|grep :80\|wc -l;sleep 1;done
 #### **HTTPS并发**
 
 **完全按照HTTP并发步骤，只需要将1000.conf基础上的对应项，改为以下内容，执行即可**
+
+备注：若使用sos作为服务端，则默认带HTTPS服务
 
 URL=[https://66.66.66.66/index.html](http://66.66.66.66/index.html)
 
