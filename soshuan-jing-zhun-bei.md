@@ -1,6 +1,6 @@
 ## 快速开始\(Quick Start\)
 
-**登录**
+#### **登录**
 
 SSH：root/sos
 
@@ -8,7 +8,7 @@ WebUI：sos/Sangfor123
 
 Webshell：root/sos
 
-**修改ip**
+#### **修改ip**
 
 默认：默认ip为111.111.111.111\(eth0口\)
 
@@ -19,7 +19,7 @@ Webshell：root/sos
 
 然后执行/etc/init.d/network restart
 
-**增加网口**
+#### **增加网口**
 
 增加eth1：
 
@@ -39,11 +39,11 @@ gateway 172.15.100.254
 
 然后执行/etc/init.d/network restart
 
-**测试口**
+#### **测试口**
 
 为了便于管理区分，建议eth0作为管理口，其他口作为测试口\(当然，口不够时，eth1也是可以用的\)
 
-**DNS修改**
+#### **DNS修改**
 
 默认：默认dns为8.8.8.8
 
