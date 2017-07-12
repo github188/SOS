@@ -20,6 +20,8 @@ mount --bind /sangfor /sos/server/feitp-server/REV/sangfor
 
 说明：mount --bind是linux内核从2.4.0开始支持的，可以把一部分文件系统挂载到文件系统中的其他位置，不需要设置，卸载的话，直接umount 全路径，如/sos/server/feitp-server/REV/sangfor
 
+
+
 **bug2：/etc/resolv.conf修改后，重启后被恢复为8.8.8.8**
 
 版本：SOS\(v0.0.1 Beta\)
@@ -31,4 +33,22 @@ mount --bind /sangfor /sos/server/feitp-server/REV/sangfor
 \#修改/etc/resolv.conf后，执行copy操作\(要一模一样\)，这样重启就不会被恢复了
 
 cp /etc/resolv.conf /etc/bak.resolv.conf.bak
+
+
+
+**bug3：系统时间错误**
+
+版本：SOS\(v0.0.1 Beta\)
+
+原因：由于安装系统时采用了UTC，UTC就是0时区的时间，是国际标准，而中国处于UTC+8时区
+
+解决：
+
+\#修改时区
+
+rm /etc/localtime 
+
+ln -sf /usr/share/zoneinfo/Asia/Shanghai /etc/localtime
+
+
 
