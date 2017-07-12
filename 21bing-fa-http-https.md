@@ -62,6 +62,16 @@ cd /sos/tmp
 
 curl-loader -f ../case/1000.conf
 
+**\#可以使用以下命令观察是否在跑**
+
+iftop -N -n -i eth1
+
+或者
+
+_\#建议在客户端和服务端上都执行_
+
+while :; do netstat -anp\|grep EST\|grep :80\|wc -l;sleep 1;done
+
 #### **HTTPS并发**
 
 完全按照HTTP并发步骤，只需要将1000.conf基础上的对应项，改为以下内容，执行即可
