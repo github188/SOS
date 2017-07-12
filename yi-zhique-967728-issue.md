@@ -72,7 +72,7 @@ lrwxrwxrwx 1 root root 26 Jul  5 09:10 /usr/lib/x86\_64-linux-gnu/libstdc++.so.6
 
 解决：
 
-\#删除链接libstdc++.so.6，再次链接
+\#删除链接libstdc++.so.6，再次链接
 
 cd /usr/lib/x86\_64-linux-gnu/
 
