@@ -60,3 +60,29 @@ hwclock --systohc
 
 \#可以使用date和hwclock --show查看时间是否一致，且是否是中国当前时间
 
+**bug4：使用vpn并发工具时，重启lmdlan报错**
+
+版本：SOS\(v0.0.1 Beta\)
+
+原因：备份libstdc++.so.6.0.20为bak，并使用libstdc++.so.6.0.21替换libstdc++.so.6.0.20时，libstdc++.so.6仍链接到bak文件
+
+root@SOS:/\# ls -l  /usr/lib/x86\_64-linux-gnu/libstdc++.so.6
+
+lrwxrwxrwx 1 root root 26 Jul  5 09:10 /usr/lib/x86\_64-linux-gnu/libstdc++.so.6 -&gt; libstdc++.so.6.0.20.bakzxx
+
+解决：
+
+\#删除链接libstdc++.so.6，再次链接
+
+cd /usr/lib/x86\_64-linux-gnu/
+
+rm libstdc++.so.6
+
+ln -s libstdc++.so.6.0.20 libstdc++.so.6
+
+\#检查libstdc++.so.6，链接到libstdc++.so.6.0.20 ，说明解决成功\(可以重启lmdlan测试下\)
+
+root@SOS:/usr/lib/x86\_64-linux-gnu\# ls -l  /usr/lib/x86\_64-linux-gnu/libstdc++.so.6
+
+lrwxrwxrwx 1 root root 19 Jul 12 15:36 /usr/lib/x86\_64-linux-gnu/libstdc++.so.6 -&gt; libstdc++.so.6.0.20
+
