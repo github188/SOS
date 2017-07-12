@@ -15,5 +15,4 @@
 * [curl-loader使用](curl-loadershi-yong.md)
 * [IpsecTool使用](vpnbing-fa-gong-ju-shi-yong.md)
 * [SangforTool使用](sangfortool.md)
-* [已知缺陷\(issue\)](yi-zhique-967728-issue.md)
 
