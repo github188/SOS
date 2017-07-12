@@ -6,7 +6,8 @@
 
 修改：
 
-修改/etc/network/interfaces对应的address、netmask、gateway，保存
+修改/etc/network/interfaces  
+对应的address、netmask、gateway，保存
 
 然后执行/etc/init.d/network restart
 
