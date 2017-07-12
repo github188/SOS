@@ -7,7 +7,6 @@
 * [使用场景\(VPN:大并发接入\)](shi-yong-chang-666f28-vpn-da-bing-fa-jie-516529.md)
 * [使用场景\(容器云:多ip负载场景\)](shi-yong-chang-666f28-rong-qi-4e913a-duo-ip-fu-zai-chang-666f29.md)
 * [计划任务](ji-hua-ren-wu.md)
-* [计划任务](ji-hua-ren-wu.md)
 * [isic使用](isicshi-yong.md)
 * [iperf使用](chapter1.md)
 * [curl使用](curlshi-yong.md)
