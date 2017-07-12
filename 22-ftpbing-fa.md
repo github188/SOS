@@ -26,7 +26,11 @@ ipnum=\`expr $i + 100\`
 
 ftp-loader 50
 
-\#可以使用以下命令观察是否在跑
+**\#可以使用以下命令观察是否在跑（因为文件很小，很快下完）**
 
+iftop -N -n -i eth1
 
+或者
+
+while :; do netstat -anp\|grep EST\|grep :21\|wc -l;sleep 1;done
 
