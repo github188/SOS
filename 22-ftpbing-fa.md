@@ -12,7 +12,7 @@
 
 ifconfig eth1 66.67.67.67 netmask 255.0.0.0
 
-**\#修改FTP并发脚本/usr/bin/ftp-loader，更改对应的项，为以下内容：**
+**\#修改FTP并发脚本/usr/bin/ftp-loader，更改对应的项，为以下内容**
 
 wangduan=66.66.66.
 
@@ -22,7 +22,5 @@ _\#有两个ipnum要改，别改漏了_
 
 ipnum=\`expr $i + 100\`
 
-**\#执行FTP并发脚本：**
-
-
+**\#执行FTP并发脚本**
 
