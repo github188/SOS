@@ -40,17 +40,23 @@ cp /etc/resolv.conf /etc/bak.resolv.conf.bak
 
 解决：
 
-delete system time-zone
+\#进入vyos的configure模式修改时区，并同步硬件时钟\(重启依然生效\)
 
-\#修改时区，并同步硬件时钟
+su - vyos
 
-rm /etc/localtime
+configure
 
-ln -sf /usr/share/zoneinfo/Asia/Shanghai /etc/localtime
+set system time-zone Asia/Shanghai
+
+commit save
+
+save
+
+exit
+
+exit
 
 hwclock --systohc
 
 \#可以使用date和hwclock --show查看时间是否一致，且是否是中国当前时间
-
-
 
