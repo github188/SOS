@@ -32,5 +32,7 @@ iftop -N -n -i eth1
 
 或者
 
+_\#建议在客户端和服务端上都执行_
+
 while :; do netstat -anp\|grep EST\|grep :21\|wc -l;sleep 1;done
 
