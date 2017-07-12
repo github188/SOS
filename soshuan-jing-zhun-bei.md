@@ -2,9 +2,9 @@
 
 **登录**
 
-终端&ssh：root/sos
+SSH：root/sos
 
-SOS WebUI：sos/Sangfor123
+WebUI：sos/Sangfor123
 
 Webshell：root/sos
 
