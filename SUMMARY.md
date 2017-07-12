@@ -18,7 +18,5 @@
 * [IpsecTool使用](vpnbing-fa-gong-ju-shi-yong.md)
 * [SangforTool使用](sangfortool.md)
 * [常见问题\(Q&A\)](chang-jian-wen-989828-q-and-a.md)
-* [2.2 FTP并发](22-ftpbing-fa.md)
-* [2.3 CIFS并发](23-cifsbing-fa.md)
 * [已知缺陷\(issue\)](yi-zhique-967728-issue.md)
 
