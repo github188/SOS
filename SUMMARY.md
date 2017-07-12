@@ -6,11 +6,13 @@
 * [2.1 简洁篇 - HTTP/HTTPS并发](21bing-fa-http-https.md)
 * [2.2 简洁篇 - FTP并发](22-ftpbing-fa.md)
 * [2.3 简洁篇 - CIFS并发](23-cifsbing-fa.md)
+* 2.4 简洁篇 - TCP/UDP吞吐
 * [场景篇 - WOC稳定性测试仿真](shi-yong-chang-666f28-woc-wen-ding-xing-ce-shi-fang-771f29.md)
 * [场景篇 - VPN大并发仿真](shi-yong-chang-666f28-vpn-da-bing-fa-jie-516529.md)
 * [场景篇 - 容器云多ip负载仿真](shi-yong-chang-666f28-rong-qi-4e913a-duo-ip-fu-zai-chang-666f29.md)
-* [isic使用](isicshi-yong.md)
+* 工具介绍
 * [iperf使用](chapter1.md)
+* [isic使用](isicshi-yong.md)
 * [计划任务](ji-hua-ren-wu.md)
 * [curl使用](curlshi-yong.md)
 * [conn\_test使用](conntest-shi-yong.md)
@@ -18,5 +20,5 @@
 * [IpsecTool使用](vpnbing-fa-gong-ju-shi-yong.md)
 * [SangforTool使用](sangfortool.md)
 * [常见问题\(Q&A\)](chang-jian-wen-989828-q-and-a.md)
-* [已知缺陷\(issue\)](yi-zhique-967728-issue.md)
+* 2.4 简洁篇 - TCP/UDP吞吐
 
