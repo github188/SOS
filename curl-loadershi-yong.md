@@ -1,12 +1,10 @@
 
 
-curl-loader（也被称为“omes-NIK”和“davilka”）一个功能强大的C语言应用程序测试和负载生成工具。 
+curl-loader（也被称为“omes-NIK”和“davilka”）一个功能强大的C语言应用程序测试和负载生成工具。
 
-它使用HTTP，FTP和TLS / SSL堆栈，模拟每个具有自己的IP地址的数万个用户/客户端。 
+它使用HTTP，FTP和TLS / SSL堆栈，模拟每个具有自己的IP地址的数万个用户/客户端。
 
 目标是提供一个替代Spirent Avalanche和Ixia IxLoad的工具。
-
-
 
 |  |  |
 | :--- | :--- |
