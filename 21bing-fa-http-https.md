@@ -62,3 +62,9 @@ cd /sos/tmp
 
 curl-loader -f ../case/1000.conf
 
+#### **HTTPS并发**
+
+完全按照HTTP并发步骤，只需要将URL=[http://66.66.66.66/index.html](http://66.66.66.66/index.html)改成URL=[https://66.66.66.66/index.html](http://66.66.66.66/index.html)，并执行
+
+
+
