@@ -1,5 +1,13 @@
 #### 快速开始\(Quick Start\)
 
+**登录**
+
+终端&ssh：root/sos
+
+SOS WebUI：sos/Sangfor123
+
+Webshell：root/sos
+
 **修改ip**
 
 默认：默认ip为111.111.111.111\(eth0口\)
@@ -39,7 +47,6 @@ gateway 172.15.100.254
 
 修改/etc/resolv.conf\(修改或增加你需要的dns\)
 
-**执行：cp /etc/resolv.conf /etc/bak.resolv.conf.bak （务必要执行，未执行重启后会被恢复为8.8.8.8）**
-
-
+**执行：cp /etc/resolv.conf /etc/bak.resolv.conf.bak   
+（务必要执行，未执行重启后会被恢复为8.8.8.8）**
 
