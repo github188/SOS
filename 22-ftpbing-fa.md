@@ -12,3 +12,21 @@
 
 ifconfig eth1 66.67.67.67 netmask 255.0.0.0
 
+**\#修改FTP并发脚本/usr/bin/ftp-loader，更改对应的项，为以下内容：**
+
+wangduan=66.66.66.
+
+curl --verbose --interface $wangduan$ipnum -O -u "test:test" ftp://66.66.66.66/sos.txt &
+
+_\#有两个ipnum要改，别改漏了_
+
+ipnum=\`expr $i + 100\` 
+
+**\#执行FTP并发脚本：**
+
+
+
+
+
+
+
