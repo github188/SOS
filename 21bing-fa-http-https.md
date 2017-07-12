@@ -64,7 +64,11 @@ curl-loader -f ../case/1000.conf
 
 #### **HTTPS并发**
 
-完全按照HTTP并发步骤，只需要将URL=[http://66.66.66.66/index.html](http://66.66.66.66/index.html)改成URL=[https://66.66.66.66/index.html](http://66.66.66.66/index.html)，并执行
+完全按照HTTP并发步骤，只需要将1000.conf基础上的对应项，改为以下内容，执行即可
 
+URL=[https://66.66.66.66/index.html](http://66.66.66.66/index.html)
 
+TIMER\_URL\_COMPLETION = 0
+
+TIMER\_AFTER\_URL\_SLEEP =1000
 
