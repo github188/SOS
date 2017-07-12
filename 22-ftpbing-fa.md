@@ -20,13 +20,9 @@ curl --verbose --interface $wangduan$ipnum -O -u "test:test" ftp://66.66.66.66/s
 
 _\#有两个ipnum要改，别改漏了_
 
-ipnum=\`expr $i + 100\` 
+ipnum=\`expr $i + 100\`
 
 **\#执行FTP并发脚本：**
-
-
-
-
 
 
 
