@@ -18,23 +18,41 @@ cp /sos/client/curl-loader-0.56/conf-examples/10K.conf /sos/case/1000.conf
 
 **\#修改HTTP并发配置，修改1000.conf中对应项，改为以下内容\(未列出的内容，不要删除\)，保存**
 
+_\#任务名称_
+
 BATCH\_NAME= 1000
+
+_\#并发数_
 
 CLIENTS\_NUM\_MAX=1000
 
+_\#初始化并发数_
+
 CLIENTS\_NUM\_START=20
+
+_\#每秒增长数_
 
 CLIENTS\_RAMPUP\_INC=20
 
+_\#绑定网口_
+
 INTERFACE   =eth1
 
+_\#并发IP掩码_
+
 NETMASK=8
+
+_\#并发IP段_
 
 IP\_ADDR\_MIN= 66.67.67.68
 
 IP\_ADDR\_MAX= 66.167.167.167
 
-URL=http://66.66.66.66/index.html
+_\#任务执行次数，默认为-1\(一直执行，直到CTRL+C\)，设置为1则执行次_
+
+CYCLES\_NUM= 1
+
+URL=[http://66.66.66.66/index.html](http://66.66.66.66/index.html)
 
 **\#进入/sos/tmp目录，因为在此执行，会生成测试日志**
 
