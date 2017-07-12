@@ -1,4 +1,4 @@
-#### 快速开始\(Quick Start\)
+## 快速开始\(Quick Start\)
 
 **登录**
 
@@ -47,6 +47,6 @@ gateway 172.15.100.254
 
 修改/etc/resolv.conf\(修改或增加你需要的dns\)
 
-**执行：cp /etc/resolv.conf /etc/bak.resolv.conf.bak   
+**执行：cp /etc/resolv.conf /etc/bak.resolv.conf.bak  
 （务必要执行，未执行重启后会被恢复为8.8.8.8）**
 
