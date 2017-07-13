@@ -6,10 +6,6 @@ curl-loader（也被称为“omes-NIK”和“davilka”）一个功能强大的
 
 目标是提供一个替代Spirent Avalanche和Ixia IxLoad的工具。
 
-
-
-
-
 |  |  |
 | :--- | :--- |
 | BATCH\_NAME= 10K | 测试对象的名称 |
@@ -42,5 +38,9 @@ curl-loader（也被称为“omes-NIK”和“davilka”）一个功能强大的
 
 `./curl-loader -f test.conf`
 
-详细使用参见GitHub：[https://github.com/aschepis/curl-loader](https://github.com/aschepis/curl-loader)
+详细使用参见
+
+GitHub：[https://github.com/aschepis/curl-loader](https://github.com/aschepis/curl-loader)
+
+官网：http://curl-loader.sourceforge.net/
 
