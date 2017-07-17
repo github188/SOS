@@ -1,7 +1,7 @@
 # Summary
 
-* [介绍](sosjie-shao.md)
-* [1. 功能支持](README.md)
+* [介绍](README.md)
+* [1. 功能支持](sosjie-shao.md)
 * [2. 快速开始](soshuan-jing-zhun-bei.md)
 * [2.1 简洁篇 - HTTP/HTTPS并发](21bing-fa-http-https.md)
 * [2.2 简洁篇 - FTP并发](22-ftpbing-fa.md)

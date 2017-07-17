@@ -1,37 +1,37 @@
-## 功能支持
+## SOS是什么？
 
----
+SOS的诞生，拟提高测试能力\(仿真\)与效率，让产品质量好的要命，让质量问题看见它喊救命，有志成为：SuperOS/SangforTestOS！
 
-此文档是SOS系统的简要说明和基本使用，不是一份安装指导文档，也不是配置指导
+## **定位**
 
-| **支持功能列表** |  |
+最终以系统交付产品一站式测试能力\(适用于网关型等产品的性能稳定性、功能测试、可靠性、自动化测试等\)，以促进产品质量、测试效率提升\(后续所有人员参与维护\)
+
+## **解决什么痛点？**
+
+| 维度 | 痛点 |  |
+| :--- | :--- | :--- |
+| WOC | CIFS/FTP/HTTP/HTTPS等多ip并发协议代理无有效方案测试\(ATP不支持协议栈、历史Docker方案资源消耗高\) | 复杂网络环境构建\(如VLAN、WCCP、链路聚合、动态路由环境等\) |
+| PR | VPN TCP/UDP高并发测试、VPN并发接入测试\(PR开发提供工具\) | Docker项目并发多IP负载测试 |
+| 公共 | 高端测试资源稀缺、真实协议测试不支持 | Windows不适合做性能测试机、自动化难度高、常用测试手段效率极低+分散 |
+
+## SOS特点
+
+| 维度 | 特点 |
 | :--- | :--- |
-| VLANs | 802.1q and QinQ |
-| Static and dynamic routing | BGP for IPv4 and IPv6, OSPFv2, RIP, RIPng, policy-based routing, equal cost multi-path |
-| Firewall | Firewall rulesets for IPv4 and IPv6 traffic you can assign to interfaces, zone-based firewall, address/network/port groups for IPv4 firewalls |
-| Tunnel interfaces | PPPoE, GRE, IPIP, SIT, static L2TPv3, VXLAN |
-| VPN | Site-to-site IPsec for IPv4 and IPv6, L2TP/IPsec server, PPTP server, OpenVPN for site-to-site and remote access |
-| NAT | Source NAT, port forwards, one to one, one to many, and many to many translations |
-| DHCP | DHCP and DHCPv6 server and relay |
-| Redundancy | VRRP, connection table synchronization |
-| Flow accounting | NetFlow and sFlow |
-| Proxy | Web proxy and URL filtering |
-| Shaping | QoS policies \(drop tail, fair queue, and others\), traffic redirection. |
+| 启动时间 | 极快，30S |
+| 磁盘 | 小，最低2G |
+| 内存 | 小，最低256M |
+| 兼容性 | HCI/ESXi/公司主流硬件 |
+| 性能 | 高 |
 
-| **支持工具列表** |  |
-| :--- | :--- |
-| 网络发包工具 | Iperf |
-| 模糊测试工具 | ISIC |
-| 网络性能测试工具 | curl-loader |
-| 定时任务工具（使用IP直接通过浏览器访问） | 轻松创建和管理各种定时任务 |
-| WebShell工具 | 通过网页轻松访问和管理设备 |
-| 支持的传输协议 | ftp、http、https、smb |
+## 版本更新
 
-使用中遇到的任何问题可以咨询：
+| 版本号 | 发布时间 | 开发者 |
+| :--- | :--- | :--- |
+| SOS \(v0.0.1 Beta\) | 2017-07-06 | 周兴喜、朱永波、仰桥 |
+|  |  |  |
 
-* `周兴喜`
-* `仰桥`
-* `朱永波`
+
 
 
 
