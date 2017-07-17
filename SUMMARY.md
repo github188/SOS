@@ -6,7 +6,7 @@
 * [2.1 简洁篇 - HTTP/HTTPS并发](21bing-fa-http-https.md)
 * [2.2 简洁篇 - FTP并发](22-ftpbing-fa.md)
 * [2.3 简洁篇 - CIFS并发](23-cifsbing-fa.md)
-* [2.4 简洁篇 - TCP/UDP吞吐](24-jian-ji-pian-tcp-udp-tun-tu.md)
+* [2.4 简洁篇 - TCP/UDP吞吐](24-tcp-udp-tun-tu.md)
 * [2.5 场景篇 - WOC稳定性测试仿真](shi-yong-chang-666f28-woc-wen-ding-xing-ce-shi-fang-771f29.md)
 * [2.6 场景篇 - VPN大并发仿真](shi-yong-chang-666f28-vpn-da-bing-fa-jie-516529.md)
 * [2.7 场景篇 - 容器云多ip负载仿真](shi-yong-chang-666f28-rong-qi-4e913a-duo-ip-fu-zai-chang-666f29.md)
