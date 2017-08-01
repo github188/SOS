@@ -104,3 +104,13 @@ lrwxrwxrwx 1 root root 19 Jul 12 15:36 /usr/lib/x86\_64-linux-gnu/libstdc++.so.6
 
 解决：在vyos的configure模式下运行set service ssh disable-host-validation
 
+---
+
+**bug6：ftp删除临时ip失败**
+
+版本：SOS\(v0.0.1 Beta\)
+
+原因：ifconfig eth0:$i down命令删除ip失败
+
+解决：使用命令：ip add del $wangduan$ipnum/16 dev eth0:$i
+
