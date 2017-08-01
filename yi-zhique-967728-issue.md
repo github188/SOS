@@ -96,5 +96,11 @@ lrwxrwxrwx 1 root root 19 Jul 12 15:36 /usr/lib/x86\_64-linux-gnu/libstdc++.so.6
 
 ---
 
+**bug5：远程ssh很慢**
 
+版本：SOS\(v0.0.1 Beta\)
+
+原因：ssh开启了dns解析
+
+解决：在vyos的configure模式下运行set service ssh disable-host-validation
 
