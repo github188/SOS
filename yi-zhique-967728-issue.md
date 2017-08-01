@@ -114,3 +114,13 @@ lrwxrwxrwx 1 root root 19 Jul 12 15:36 /usr/lib/x86\_64-linux-gnu/libstdc++.so.6
 
 解决：使用命令：ip add del $wangduan$ipnum/16 dev eth0:$i
 
+---
+
+**bug7：ftp删除临时ip过块，导致下载出错**
+
+版本：SOS\(v0.0.1 Beta\)
+
+原因：文件在后台下载未完成，就**删除临时ip**
+
+解决：增加下载进程判断，再删除临时ip
+
