@@ -120,7 +120,7 @@ lrwxrwxrwx 1 root root 19 Jul 12 15:36 /usr/lib/x86\_64-linux-gnu/libstdc++.so.6
 
 版本：SOS\(v0.0.1 Beta\)
 
-原因：文件在后台下载未完成，就**删除临时ip**
+原因：文件在后台下载未完成，就删除临时ip
 
 解决：增加curl进程判断，等所有下载完成再删除
 
@@ -153,4 +153,14 @@ fi
 sleep 1
 
 done
+
+---
+
+**bug8：使用帮助中未指明ftp、cifs服务器根目录**
+
+版本：SOS\(v0.0.1 Beta\)
+
+原因：使用帮助中未指明ftp、cifs服务器根目录
+
+解决：补充服务器根目录
 
