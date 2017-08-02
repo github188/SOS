@@ -122,5 +122,35 @@ lrwxrwxrwx 1 root root 19 Jul 12 15:36 /usr/lib/x86\_64-linux-gnu/libstdc++.so.6
 
 原因：文件在后台下载未完成，就**删除临时ip**
 
-解决：增加下载进程判断，再删除临时ip
+解决：增加curl进程判断，等所有下载完成再删除
+
+while true
+
+do
+
+curl\_num=\`ps -ef\|grep curl\|wc -l\`
+
+echo $curl\_num
+
+if \[ $curl\_num == 1 \];then
+
+for\(\(i=1;i&lt;=$loadernum;i++\)\)
+
+do
+
+ipnum=\`expr $i + 129\`
+
+ip add del $wangduan$ipnum/16 dev eth9:$i
+
+\#ifconfig eth9:$i down
+
+done 
+
+exit 0 
+
+fi
+
+sleep 1
+
+done
 
