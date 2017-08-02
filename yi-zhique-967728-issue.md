@@ -116,7 +116,7 @@ lrwxrwxrwx 1 root root 19 Jul 12 15:36 /usr/lib/x86\_64-linux-gnu/libstdc++.so.6
 
 ---
 
-**bug7：ftp删除临时ip过块，导致下载出错**
+**bug7：ftp、cifs删除临时ip过块，导致下载出错**
 
 版本：SOS\(v0.0.1 Beta\)
 
@@ -144,9 +144,9 @@ ip add del $wangduan$ipnum/16 dev eth9:$i
 
 \#ifconfig eth9:$i down
 
-done 
+done
 
-exit 0 
+exit 0
 
 fi
 
