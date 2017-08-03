@@ -8,5 +8,11 @@
 
 答疑：
 
+默认账号密码如下：
 
+SSH：root/sos
+
+WebUI：sos/Sangfor123
+
+Webshell：root/sos
 
