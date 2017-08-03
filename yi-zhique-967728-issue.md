@@ -102,7 +102,13 @@ lrwxrwxrwx 1 root root 19 Jul 12 15:36 /usr/lib/x86\_64-linux-gnu/libstdc++.so.6
 
 原因：ssh开启了dns解析
 
-解决：在vyos的configure模式下运行set service ssh disable-host-validation
+解决：在vyos的configure模式下运行以下命令：
+
+set service ssh disable-host-validation
+
+commit save
+
+save
 
 ---
 
@@ -163,4 +169,162 @@ done
 原因：使用帮助中未指明ftp、cifs服务器根目录
 
 解决：补充服务器根目录
+
+---
+
+**bug9：curl-loader跑高http、https并发时，请求报告中有ERR:超过0、3XX：超过0**
+
+版本：SOS\(v0.0.1 Beta\)
+
+原因：需要设置一些参数
+
+解决：
+
+**客户端：**
+
+有些是因为客户端设备的默认参数、cpu高低，会影响客户端跑的结果
+
+1、第一步
+
+在SOS客户端下执行以下命令（重启不会保存）：
+
+echo 1048576 &gt; /proc/sys/net/core/wmem\_max
+
+/sbin/sysctl net.ipv4.tcp\_mem="1048576 1048576 1048576"
+
+echo 0 &gt; /proc/sys/net/ipv4/conf/eth1/rp\_filter
+
+echo 0 &gt; /proc/sys/net/ipv4/conf/all/rp\_filter
+
+2、第二步
+
+根据客户端cpu占用情况来执行第二步，如果单个cpu满，则启用curl-loader多cpu执行参数，例如：
+
+curl-loader -t2 -f 配置文件\(注意：-t后没有空格，意思就是使用2个cpu，如果想用3个cpu，则-t3\)
+
+**服务端：**
+
+**ERR：超过0**
+
+服务端默认参数，不能跑高并发，所以需要进行以下操作
+
+1、第一步
+
+备份配置文件
+
+cp /etc/nginx/nginx.conf /etc/nginx/nginx.conf.sos
+
+修改配置文件
+
+修改/etc/nginx/nginx.conf，增加以下内容
+
+在worker\_processes 1;下加上
+
+worker\_rlimit\_nofile 65536;
+
+将
+
+events {
+
+    worker\_connections 1024;
+
+}
+
+修改为
+
+events {
+
+    use epoll;
+
+    worker\_connections 65536;
+
+}
+
+最后保存，执行：/etc/init.d/nginx restart
+
+**3XX:超过0**
+
+服务端的web默认会重定向，需要做一下修改：
+
+1、第一步
+
+备份配置文件
+
+cp /etc/nginx/conf.d/default.conf  /etc/nginx/conf.d/default.conf.sos
+
+修改配置文件
+
+修改/etc/nginx/conf.d/default.conf，参照一下内容，注释成一致\(标注\#的\)，并保存
+
+    \#location  /sangfor/ {
+
+       \#proxy\_pass http://127.0.0.1/;
+
+       \#root   /usr/share/nginx/html/;
+
+      \#index  index.html index.htm;
+
+   \#}
+
+
+
+\#    location  /webshell/ {
+
+\#        proxy\_pass https://127.0.0.1:4200/;
+
+\#       root   /usr/share/nginx/html/webshell;
+
+\#      index  webshell.html index.htm;
+
+\#   }
+
+
+
+    location / {
+
+\#        proxy\_pass http://127.0.0.1:5920;
+
+        root   /usr/share/nginx/html;
+
+        index  index.html index.htm;
+
+    }
+
+
+
+2、第一步
+
+备份配置文件
+
+cp /etc/nginx/conf.d/example\_ssl.conf  /etc/nginx/conf.d/example\_ssl.conf.sos
+
+修改配置文件
+
+修改/etc/nginx/conf.d/example\_ssl.conf，参照一下内容，注释成一致\(标注\#的\)，并保存
+
+    location /webshell/ {
+
+\#        proxy\_pass https://127.0.0.1:4200;
+
+\#  }
+
+
+
+    location / {
+
+\#        proxy\_pass http://127.0.0.1:5920;
+
+        root   /usr/share/nginx/html;
+
+        index  index.html index.htm;
+
+  }
+
+修改完后，执行：/etc/init.d/nginx restart
+
+进行重跑验证（也有可能因为其他原因，例如客户端、服务端性能不够，如果还未解决，请联系周兴喜）
+
+
+
+
 
