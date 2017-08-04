@@ -218,7 +218,8 @@ cp /etc/nginx/nginx.conf /etc/nginx/nginx.conf.sos
 
 修改/etc/nginx/nginx.conf，增加以下内容
 
-在worker\_processes 1;下加上
+在worker\_processes 1;  
+下加上
 
 worker\_rlimit\_nofile 65536;
 
@@ -226,7 +227,9 @@ worker\_rlimit\_nofile 65536;
 
 events {
 
-    worker\_connections 1024;
+```
+worker\_connections 1024;
+```
 
 }
 
@@ -234,9 +237,11 @@ events {
 
 events {
 
-    use epoll;
+```
+use epoll;
 
-    worker\_connections 65536;
+worker\_connections 65536;
+```
 
 }
 
@@ -250,27 +255,29 @@ events {
 
 备份配置文件
 
-cp /etc/nginx/conf.d/default.conf  /etc/nginx/conf.d/default.conf.sos
+cp /etc/nginx/conf.d/default.conf  
+  /etc/nginx/conf.d/default.conf  
+.sos
 
 修改配置文件
 
 修改/etc/nginx/conf.d/default.conf，参照一下内容，注释成一致\(标注\#的\)，并保存
 
-    \#location  /sangfor/ {
+```
+\#location  /sangfor/ {
 
-       \#proxy\_pass http://127.0.0.1/;
+   \#proxy\_pass http://127.0.0.1/;
 
-       \#root   /usr/share/nginx/html/;
+   \#root   /usr/share/nginx/html/;
 
-      \#index  index.html index.htm;
+  \#index  index.html index.htm;
+```
 
-   \#}
-
-
+\#}
 
 \#    location  /webshell/ {
 
-\#        proxy\_pass https://127.0.0.1:4200/;
+\#        proxy\_pass [https://127.0.0.1:4200/](https://127.0.0.1:4200/);
 
 \#       root   /usr/share/nginx/html/webshell;
 
@@ -278,47 +285,55 @@ cp /etc/nginx/conf.d/default.conf  /etc/nginx/conf.d/default.conf.sos
 
 \#   }
 
+```
+location / {
+```
 
+\#        proxy\_pass [http://127.0.0.1:5920](http://127.0.0.1:5920);
 
-    location / {
+```
+    root   /usr/share/nginx/html;
 
-\#        proxy\_pass http://127.0.0.1:5920;
+    index  index.html index.htm;
 
-        root   /usr/share/nginx/html;
-
-        index  index.html index.htm;
-
-    }
-
-
+}
+```
 
 2、第一步
 
 备份配置文件
 
-cp /etc/nginx/conf.d/example\_ssl.conf  /etc/nginx/conf.d/example\_ssl.conf.sos
+cp /etc/nginx/conf.d/example\_ssl.conf
+
+/etc/nginx/conf.d/example\_ssl.conf  
+.sos
 
 修改配置文件
 
-修改/etc/nginx/conf.d/example\_ssl.conf，参照一下内容，注释成一致\(标注\#的\)，并保存
+修改/etc/nginx/conf.d/example\_ssl.conf  
+，参照一下内容，注释成一致\(标注\#的\)，并保存
 
-    location /webshell/ {
+```
+location /webshell/ {
+```
 
-\#        proxy\_pass https://127.0.0.1:4200;
+\#        proxy\_pass [https://127.0.0.1:4200](https://127.0.0.1:4200);
 
 \#  }
 
+```
+location / {
+```
 
+\#        proxy\_pass [http://127.0.0.1:5920](http://127.0.0.1:5920);
 
-    location / {
+```
+    root   /usr/share/nginx/html;
 
-\#        proxy\_pass http://127.0.0.1:5920;
+    index  index.html index.htm;
+```
 
-        root   /usr/share/nginx/html;
-
-        index  index.html index.htm;
-
-  }
+}
 
 修改完后，执行：/etc/init.d/nginx restart
 
@@ -326,5 +341,27 @@ cp /etc/nginx/conf.d/example\_ssl.conf  /etc/nginx/conf.d/example\_ssl.conf.s
 
 
 
+---
 
+**bug10：存在残留ip172.16.100.22，修改interface ip不生效**
+
+版本：SOS\(v0.0.1 Beta\)
+
+原因：vyos configure模式下有残留ip没删除
+
+解决：
+
+su - vyos（密码sos）
+
+configure
+
+ delete interfaces ethernet eth0 address
+
+commit save
+
+save
+
+继续按你需要的修改/etc/network/interfaces
+
+然后/etc/init.d/network restart；搞定
 
