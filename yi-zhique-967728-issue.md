@@ -363,3 +363,15 @@ save
 
 然后/etc/init.d/network restart；搞定
 
+---
+
+**bug11：跑ftp-loader和cifs-load前先kill掉之前的curl进程**
+
+版本：SOS\(v0.0.1 Beta\)
+
+原因：跑ftp-loader和cifs-loader失败时，后台存在好多curl进程，重跑时需要先kill掉curl进程
+
+解决：
+
+在ftp-loader和cifs-loader脚本第一行加入 kill -9 \`pidof lt-curl\` 
+
