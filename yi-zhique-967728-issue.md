@@ -264,13 +264,13 @@ cp /etc/nginx/conf.d/default.conf
 修改/etc/nginx/conf.d/default.conf，参照一下内容，注释成一致\(标注\#的\)，并保存
 
 ```
-\#location  /sangfor/ {
+#location  /sangfor/ {
 
-   \#proxy\_pass http://127.0.0.1/;
+   #proxy_pass http://127.0.0.1/;
 
-   \#root   /usr/share/nginx/html/;
+   #root   /usr/share/nginx/html/;
 
-  \#index  index.html index.htm;
+  #index  index.html index.htm;
 ```
 
 \#}
@@ -339,8 +339,6 @@ location / {
 
 进行重跑验证（也有可能因为其他原因，例如客户端、服务端性能不够，如果还未解决，请联系周兴喜）
 
-
-
 ---
 
 **bug10：存在残留ip172.16.100.22，修改interface ip不生效**
@@ -355,7 +353,7 @@ su - vyos（密码sos）
 
 configure
 
- delete interfaces ethernet eth0 address
+delete interfaces ethernet eth0 address
 
 commit save
 
