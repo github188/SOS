@@ -21,4 +21,6 @@
 * [4.7 isic使用](isicshi-yong.md)
 * [常见问题\(Q&A\)](chang-jian-wen-989828-q-and-a.md)
 * [已知缺陷\(issue\)](yi-zhique-967728-issue.md)
+* [新特性尝鲜\(feature\)](xin-te-xing-chang-9c9c28-feature.md)
+  * [体验监控 - ntopng](xin-te-xing-chang-9c9c28-feature/ti-yan-jian-kong-ntopng.md)
 
