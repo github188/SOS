@@ -228,7 +228,7 @@ worker\_rlimit\_nofile 65536;
 events {
 
 ```
-worker\_connections 1024;
+worker_connections 1024;
 ```
 
 }
@@ -240,7 +240,7 @@ events {
 ```
 use epoll;
 
-worker\_connections 65536;
+worker_connections 65536;
 ```
 
 }
