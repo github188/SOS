@@ -22,7 +22,7 @@
 
 * 监控本地网段的流量
 
-  `--local-networks|-m ="192.168.2.0/24,10.0.0.0/8,8.8.8.0/24"`
+  `--local-networks|-m = "192.168.2.0/24,10.0.0.0/8,8.8.8.0/24"`
 
 * 禁止登录
 
@@ -35,7 +35,7 @@
 * 抓包选项（BPF过滤器）
 
   ```
-  --packet-filter\|-B  "dst port 80"   \(就是常用的tcpdump的过滤方法\)
+  --packet-filter|-B "dst port 80"   (就是常用的tcpdump的过滤方法\)
   ```
 
 **ntopng详情页面截图**![](/assets/ntopng详情页面截图.png)
