@@ -10,7 +10,7 @@
 
 （3）执行重启命令使配置生效：service ntopng restart
 
-（4）登录页面：[http://{设备IP地址}:3000](http://{设备IP地址}:3000)  （如果没有使用-l参数，请输入账号密码：admin/admin）
+（4）登录页面：{设备IP地址}:3000  （如果没有使用-l参数，请输入账号密码：admin/admin）
 
 **ntopng.conf配置文件常用参数解释**
 
@@ -35,7 +35,7 @@
 * 抓包选项（BPF过滤器）
 
   ```
-  --packet-filter|-B "dst port 80"   (就是常用的tcpdump的过滤方法\)
+  --packet-filter|-B "dst port 80"   (就是常用的tcpdump的过滤方法)
   ```
 
 **ntopng详情页面截图**![](/assets/ntopng详情页面截图.png)
