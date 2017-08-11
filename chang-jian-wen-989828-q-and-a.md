@@ -50,3 +50,21 @@ echo 5120 &gt;  /proc/sys/net/ipv4/neigh/default/gc\_thresh2
 
 echo 10240 &gt;  /proc/sys/net/ipv4/neigh/default/gc\_thresh3
 
+---
+
+**Q5：服务端做http服务器时，如何启用多cpu和多进程**
+
+答疑：改/etc/nginx/nginx.conf为以下\(2个进程，4个cpu\)，并/etc/init.d/nginx restart
+
+root@SOS:/usr/share/nginx/html\# head -n4 /etc/nginx/nginx.conf
+
+
+
+user  nginx;
+
+worker\_processes 2;
+
+worker\_cpu\_affinity 00000001 00000010 00000100 00001000;
+
+
+
