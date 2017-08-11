@@ -373,5 +373,17 @@ save
 
 解决：
 
-在ftp-loader和cifs-loader脚本第一行加入 kill -9 \`pidof lt-curl\` 
+在ftp-loader和cifs-loader脚本第一行加入 kill -9 \`pidof lt-curl\`
+
+---
+
+**bug12：curl-loader使用多cpu时\(-t参数\)，client数概率性卡死不增长**
+
+版本：SOS\(v0.0.1 Beta\)
+
+原因：多cpu屏幕信息变化快无响应
+
+解决：
+
+使用回车键即可
 
