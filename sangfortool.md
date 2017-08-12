@@ -1,7 +1,5 @@
 ## SangforTool使用
 
-#### **并发Sangfor VPN**
-
 **工具原理：**
 
 1、基于现有lmdlan服务开发的，配置操作与分支配置一样，无任何区别，后台服务程序也是lmdlan
