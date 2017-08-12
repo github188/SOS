@@ -80,7 +80,20 @@ SangforTool.sh -w 1.1.1.1:4009 -u aes -p test -n 1.1.1.0 -m 255.255.255.0 -C A -
 
 ### 问题定位
 
-      日志：查看/var/log/messages
+```
+  日志：查看/var/log/messages
+  问题类型：
+  一、VPN服务启用后失败
+  检查ipsec vpn配置是否存在，可以输入IpsecTool.sh -c 0 检查服务会不会启用成功
+  二、模拟分支数据访问不了总部
+  方法一：
+  检查当前测试数据中源ip和目的ip地址，是否在/etc/sinfor/dlan/Router.conf配置源ip网段到目标网段包含了.没包含需要重现修改配置
+  方法二：
+  1、开启/etc/sinfor/SystemDefaultSet.vpn配置中参数bEnableMml为1，重启服务让其生效
+  2、telnet 127.0.0.1 51981进入后输入root dlanreocver 操作页面
+  3、输入debug 255后退出
+  4、继续发生数据，检测/var/log/messages是检测日志打印出来结果，如输入未匹配到vpn的话，表示数据不符合vpn隧道间路由规则
+```
 
 
 
