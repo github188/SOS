@@ -313,9 +313,7 @@ cp /etc/nginx/conf.d/example\_ssl.conf
 修改/etc/nginx/conf.d/example\_ssl.conf  
 ，参照一下内容，注释成一致\(标注\#的\)，并保存
 
-```
-location /webshell/ {
-```
+\#  location /webshell/ {
 
 \#        proxy\_pass [https://127.0.0.1:4200](https://127.0.0.1:4200);
 
