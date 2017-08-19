@@ -68,7 +68,7 @@ hwclock --systohc
 
 ---
 
-~~**bug4：使用vpn并发工具时，重启lmdlan报错**~~
+**bug4：使用vpn并发工具时，重启lmdlan报错**
 
 版本：SOS\(v0.0.1 Beta\)
 
