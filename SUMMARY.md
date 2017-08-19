@@ -1,6 +1,7 @@
 # Summary
 
 * [介绍](README.md)
+* [一键升级\(Update\)](yi-jian-sheng-7ea728-update.md)
 * [1. 功能支持](gong-neng-zhi-chi.md)
 * [2. 快速开始](kuai-su-kai-shi.md)
 * [2.1 简洁篇 - HTTP/HTTPS并发](21bing-fa-http-https.md)
@@ -26,5 +27,4 @@
 * [已知缺陷\(issue\)](yi-zhique-967728-issue.md)
 * [新特性尝鲜\(feature\)](xin-te-xing-chang-9c9c28-feature.md)
   * [体验监控 - ntopng\(Netflow\)](xin-te-xing-chang-9c9c28-feature/ti-yan-jian-kong-ntopng.md)
-* [一键升级\(Update\)](yi-jian-sheng-7ea728-update.md)
 
