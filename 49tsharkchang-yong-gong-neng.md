@@ -6,6 +6,12 @@ tshark非常适用于linux环境下对数据包的批量分析处理，是wiresh
 
 tshark官方使用说明文档：[https://www.wireshark.org/docs/man-pages/tshark.html](https://www.wireshark.org/docs/man-pages/tshark.html)
 
+## SOS集成功能：pcap-analysis
+
+使用方式：pcap-analysis   \[数据包\]
+
+可直接显示出数据包的五元组信息、TCP标记位与TCP选项信息
+
 ## 常用参数：
 
 -2  进行双程分析
@@ -28,11 +34,7 @@ tshark官方使用说明文档：[https://www.wireshark.org/docs/man-pages/tshar
 
 -i   指定抓包接口
 
-## SOS集成功能：pcap-analysis
 
-使用方式：pcap-analysis   \[数据包\]
-
-可直接显示出数据包的五元组信息、TCP标记位与TCP选项信息
 
 ## 例子：
 
@@ -40,5 +42,5 @@ tshark官方使用说明文档：[https://www.wireshark.org/docs/man-pages/tshar
 
 su - vyos -c "/usr/bin/tshark  -2 -r test.pcap -T fields -e eth.src -e eth.dst -e ip.src -e ip.dst -e ip.proto -e tcp.flags -e tcp.options"
 
-\\\只显示test.pcap报文的源目MAC地址，源目IP地址，协议，TCP标记 ，TCP选项
+\\只显示test.pcap报文的源目MAC地址，源目IP地址，协议，TCP标记 ，TCP选项
 
