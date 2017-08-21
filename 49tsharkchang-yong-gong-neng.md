@@ -24,7 +24,11 @@ tshark官方使用说明文档：[https://www.wireshark.org/docs/man-pages/tshar
 
 -e  当-T字段指定时，设置输出哪些字段
 
+-c   抓多少个包后停止抓包
 
+-i   指定抓包接口
+
+## 例子：
 
 
 
