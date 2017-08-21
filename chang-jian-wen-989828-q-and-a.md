@@ -58,13 +58,37 @@ echo 10240 &gt;  /proc/sys/net/ipv4/neigh/default/gc\_thresh3
 
 root@SOS:/usr/share/nginx/html\# head -n4 /etc/nginx/nginx.conf
 
-
-
 user  nginx;
 
 worker\_processes 2;
 
 worker\_cpu\_affinity 00000001 00000010 00000100 00001000;
+
+---
+
+**Q6：curl-loader如何下载多个url**
+
+答疑：在你指定的配置文件中，添加多个url即可，URLS\_NUM改成你的URL数量
+
+URLS\_NUM= 5
+
+
+
+\#\#\#\#\#\#\#\#\#\#\# URL SECTION \#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#
+
+
+
+URL=http://66.66.66.66/1.html
+
+URL=http://66.66.66.66/2.html
+
+URL=http://66.66.66.66/3.html
+
+URL=http://66.66.66.66/4.html
+
+URL=http://66.66.66.66/5.html
+
+---
 
 
 
