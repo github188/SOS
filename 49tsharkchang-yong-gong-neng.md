@@ -40,5 +40,5 @@ tshark官方使用说明文档：[https://www.wireshark.org/docs/man-pages/tshar
 
 su - vyos -c "/usr/bin/tshark  -2 -r test.pcap -T fields -e eth.src -e eth.dst -e ip.src -e ip.dst -e ip.proto -e tcp.flags -e tcp.options"
 
-\\只显示test.pcap报文的源目MAC地址，源目IP地址，协议，TCP标记 ，TCP选项
+\\\只显示test.pcap报文的源目MAC地址，源目IP地址，协议，TCP标记 ，TCP选项
 
