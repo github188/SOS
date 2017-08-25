@@ -1,3 +1,7 @@
+## ![](/assets/SOS_logo_mini.png)
+
+## 
+
 ## SOS是什么？
 
 SOS的诞生，拟提高测试能力\(仿真\)与效率，让产品质量好的要命，让质量问题看见它喊救命，有志成为：SuperOS/SangforTestOS！
