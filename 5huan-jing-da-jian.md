@@ -1,3 +1,27 @@
+以下操作先禁用vyos模式：
+
+root@SOS:~\# su vyos
+
+vyos@SOS:/root$ config
+
+设置完成后commit并save
+
+vyos@SOS\# commit
+
+\[edit\]
+
+vyos@SOS\# save
+
+Saving configuration to '/config/config.boot'...
+
+Done
+
+\[edit\]
+
+vyos@SOS\#
+
+
+
 修改VyOS密码：
 
 `set system login user vyos authentication plaintext-password {yourpassword}`
