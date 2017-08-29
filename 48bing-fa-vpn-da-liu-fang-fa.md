@@ -23,7 +23,7 @@
 3、参考curl-loader使用目录的方法去使用工具，工具几个参数需要特别说明
 
 ```
-NETMASK=30 --为当前你配置的掩码范围
+NETMASK=16
 IP_ADDR_MIN= 192.168.1.0 
 IP_ADDR_MAX= 192.168.53.255
 -->以上2个参数可以参考/etc/sinfor/dlan/Router.conf中的源地址访问输入
