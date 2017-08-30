@@ -4,25 +4,19 @@
 
 需求：50并发\(此为演示，实际并发支持很高\)
 
-环境：eth1为业务网口，eth1已up，FTP服务器IP为:66.66.66.66/8\(若使用sos作为服务端，则默认带FTP服务\)
+环境：FTP服务器IP为:66.66.66.66/8\(若使用sos作为服务端，则默认带FTP服务\)
 
 步骤：
 
 **\#修改FTP并发脚本/usr/bin/ftp-loader，更改对应的项，为以下内容**
 
-**\#CIFS服务器和需要下载的文件**
+**\#FTP服务器和需要下载的文件**
 
 nohup curl --verbose --interface $ip -O -u "test:test" ftp://66.66.66.66/sos.txt &gt;/dev/null 2&gt;&1 &
 
-\#**业务网口**
+**\#执行FTP并发脚本，使用方法：ftp-loader 并发数  起始ip  业务网口**
 
-\#有两个eth要改，别改漏了
-
-修改网口为指定业务网口eth1
-
-**\#执行FTP并发脚本，使用方法：ftp-loader 并发数  起始ip**
-
-ftp-loader 50 7.7.7.50
+ftp-loader 50 7.7.7.50 eth0
 
 **\#因为文件很小，很快下完**
 
