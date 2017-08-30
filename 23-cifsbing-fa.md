@@ -4,7 +4,7 @@
 
 需求：50并发\(此为演示，实际并发支持很高\)
 
-环境：eth1为业务网口，eth1已up，CIFS服务器IP为:66.66.66.66/8\(若使用sos作为服务端，则默认带CIFS服务\)
+环境：CIFS服务器IP为:66.66.66.66/8\(若使用sos作为服务端，则默认带CIFS服务\)
 
 步骤：
 
@@ -14,15 +14,9 @@
 
 nohup curl --verbose --interface $wangduan$ipnum -O -u "test:test" smb://66.66.66.66/test/sos.txt &gt;/dev/null 2&gt;&1 &
 
-_**\#业务网口**_
+**\#执行CIFS并发脚本，使用方法：cifs-loader 并发数 起始ip 业务网口**
 
-\#有两个eth要改，别改漏了
-
-修改网口为指定业务网口eth1
-
-**\#执行CIFS并发脚本，使用方法：cifs-loader 并发数 起始ip**
-
-cifs-loader 50 7.7.7.50
+cifs-loader 50 7.7.7.50 eth0
 
 **\#因为文件很小，很快下完**
 
