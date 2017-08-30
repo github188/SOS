@@ -38,11 +38,15 @@ curl-loader（也被称为“omes-NIK”和“davilka”）一个功能强大的
 
 `./curl-loader -f test.conf`
 
+使用man查看curl-loader帮助\(以下两个查看的帮助内容不一样\)：
+
+root@SOS:/sos/tmp\# man curl-loader
+
+root@SOS:/sos/tmp\# man curl-loader-config
+
 详细使用参见
 
 GitHub：[https://github.com/aschepis/curl-loader](https://github.com/aschepis/curl-loader)
 
 官网：[http://curl-loader.sourceforge.net/](http://curl-loader.sourceforge.net/)
-
-
 
