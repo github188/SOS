@@ -50,3 +50,5 @@ GitHub：[https://github.com/aschepis/curl-loader](https://github.com/aschepis/c
 
 官网：[http://curl-loader.sourceforge.net/](http://curl-loader.sourceforge.net/)
 
+详细解答：http://curl-loader.sourceforge.net/doc/faq.html
+
