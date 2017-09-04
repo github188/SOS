@@ -1,7 +1,7 @@
 # Summary
 
 * [介绍](README.md)
-* [一键升级\(Update\)](一键升级%28Update%29.md)
+* [一键升级\(Update\)](一键升级Update.md)
 * [1. 功能支持](gong-neng-zhi-chi.md)
 * [2. 快速开始](kuai-su-kai-shi.md)
 * [2.1 简洁篇 - HTTP/HTTPS并发](21bing-fa-http-https.md)
