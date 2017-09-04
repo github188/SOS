@@ -88,5 +88,11 @@ URL=[http://66.66.66.66/5.html](http://66.66.66.66/5.html)
 
 **Q7：curl-loader如何使用少量ip实现多并发？**
 
-答疑：使用IP\_SHARED\_NUM参数即可\(在curl-loader使用的conf文件中加入此参数\)，若IP\_SHARED\_NUM=3，则会在3个ip中不断轮询
+答疑：使用IP\_SHARED\_NUM参数即可\(在curl-loader使用的conf文件中加入此参数\)，若IP\_SHARED\_NUM=3，则会在3个ip中不断轮询。
+
+注意
+
+1、IP\_SHARED\_NUM和-t多cpu参数一起使用时，-t需要和IP\_SHARED\_NUM的值相等
+
+2、当不用-t多cpu时，则没有这个限制
 
