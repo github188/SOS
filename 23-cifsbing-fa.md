@@ -4,9 +4,9 @@
 
 环境：CIFS服务器IP为:66.66.66.66/8\(若使用sos作为服务端，则默认带CIFS服务\)
 
-**\#查看帮助说明**
+**\#查看帮助说明**
 
-cifs-loader -h
+**cifs-loader -h**
 
 用法: cifs-loader \[tisfh\] -d cifs-server
 
@@ -14,35 +14,37 @@ cifs-loader -h
 
 选项：
 
-    -t threads      并发线程数,默认值为1,当起始网段末位ip超过255后,从下一网段继续叠加,注意不要网关ip冲突
+```
+-t threads      并发线程数,默认值为1,当起始网段末位ip超过255后,从下一网段继续叠加,注意不要网关ip冲突
 
-    -i interface    业务网口,默认值为eth7
+-i interface    业务网口,默认值为eth7
 
-    -s start\_ip     起始ip,默认值为7.7.7.70,掩码为16位
+-s start\_ip     起始ip,默认值为7.7.7.70,掩码为16位
 
-    -d destination  目的cifs服务器,默认为空
+-d destination  目的cifs服务器,默认为空
 
-    -f file         指定下载文件,默认为服务器根目录下的sos.txt;指定路径eg: sangfor/sos.txt
+-f file         指定下载文件,默认为服务器根目录下的sos.txt;指定路径eg: sangfor/sos.txt
 
-    -l loop         循环下载，可用作稳定性打流，默认只下载一次
+-l loop         循环下载，可用作稳定性打流，默认只下载一次
 
-    -h help         帮助
+-h help         帮助
+```
 
 
 
-\#范例1：跑100并发，业务网口为eth7，开始ip为7.7.7.50，cifs服务器为9.9.9.9，下载的文件为test.txt
+**\#范例1：跑100并发，业务网口为eth7，开始ip为7.7.7.50，cifs服务器为9.9.9.9，下载的文件为test.txt**
 
 cifs-loader -t 100 -i eth7 -s 7.7.7.50 -d 66.66.66.66 -f test.txt
 
 
 
-\#范例2：50并发循环下载默认文件sos.txt
+**\#范例2：50并发循环下载默认文件sos.txt**
 
 cifs-loader -t 50 -i eth0 -s 7.7.7.50 -d 66.66.66.66 -l
 
 
 
-**\#注意事项**
+**\#注意事项**
 
 cifs count 为 0 表示已完成下载
 
@@ -50,7 +52,7 @@ cifs count 为 0 表示已完成下载
 
 
 
-_\#建议在客户端和服务端上都执行_
+_**\#建议在客户端和服务端上都执行**_
 
 while :; do netstat -anp\|grep EST\|grep :445\|wc -l;sleep 1;done
 
