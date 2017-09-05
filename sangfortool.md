@@ -93,7 +93,7 @@ SangforTool.sh -w 1.1.1.1:4009 -u aes -p test -n 1.1.1.0 -m 255.255.255.0 -C A -
   1、开启/etc/sinfor/SystemDefaultSet.vpn配置中参数bEnableMml为1，重启服务让其生效
   2、telnet 127.0.0.1 51981进入后输入root dlanreocver 操作页面
   3、输入debug 255后退出
-  4、继续发生数据，检测/var/log/messages是检测日志打印出来结果，如输入未匹配到vpn的话，表示数据不符合vpn隧道间路由规则
+  4、继续发送数据，检测/var/log/messages是检测日志打印出来结果，如输入未匹配到vpn的话，表示数据不符合vpn隧道间路由规则
 ```
 
 
