@@ -2,27 +2,53 @@
 
 #### CIFS**并发**
 
-需求：50并发\(此为演示，实际并发支持很高\)
-
 环境：CIFS服务器IP为:66.66.66.66/8\(若使用sos作为服务端，则默认带CIFS服务\)
 
-步骤：
+**\#查看帮助说明**
 
-**\#修改CIFS并发脚本/usr/bin/cifs-loader，更改对应的项，为以下内容**
+cifs-loader -h
 
-**\#CIFS服务器和需要下载的文件**
+用法: cifs-loader \[tisfh\] -d cifs-server
 
-nohup curl --verbose --interface $wangduan$ipnum -O -u "test:test" smb://66.66.66.66/test/sos.txt &gt;/dev/null 2&gt;&1 &
+例子：cifs-loader -t 50 -i eth7 -s 7.7.7.7 -d 9.9.9.9
 
-**\#执行CIFS并发脚本，使用方法：cifs-loader 并发数 起始ip 业务网口**
+选项：
 
-cifs-loader 50 7.7.7.50 eth0
+    -t threads      并发线程数,默认值为1,当起始网段末位ip超过255后,从下一网段继续叠加,注意不要网关ip冲突
 
-**\#因为文件很小，很快下完**
+    -i interface    业务网口,默认值为eth7
+
+    -s start\_ip     起始ip,默认值为7.7.7.70,掩码为16位
+
+    -d destination  目的cifs服务器,默认为空
+
+    -f file         指定下载文件,默认为服务器根目录下的sos.txt;指定路径eg: sangfor/sos.txt
+
+    -l loop         循环下载，可用作稳定性打流，默认只下载一次
+
+    -h help         帮助
+
+
+
+\#范例1：跑100并发，业务网口为eth7，开始ip为7.7.7.50，cifs服务器为9.9.9.9，下载的文件为test.txt
+
+cifs-loader -t 100 -i eth7 -s 7.7.7.50 -d 66.66.66.66 -f test.txt
+
+
+
+\#范例2：50并发循环下载默认文件sos.txt
+
+cifs-loader -t 50 -i eth0 -s 7.7.7.50 -d 66.66.66.66 -l
+
+
+
+**\#注意事项**
 
 cifs count 为 0 表示已完成下载
 
-或者
+虚拟ip会从起始ip开始叠加，超过255后会从下一网段继续，注意不要和网关ip冲突
+
+
 
 _\#建议在客户端和服务端上都执行_
 
