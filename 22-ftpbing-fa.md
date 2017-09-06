@@ -15,43 +15,41 @@
 
 选项：
 
-    -t threads      并发线程数,默认值为1,当起始网段末位ip超过255后,从下一网段继续叠加,注意不要网关ip冲突
+```
+-t threads      并发线程数,默认值为1,当起始网段末位ip超过255后,从下一网段继续叠加,注意不要网关ip冲突
 
-    -i interface    业务网口,默认值为eth7
+-i interface    业务网口,默认值为eth7
 
-    -s start\_ip     起始ip,默认值为7.7.7.70,掩码为16位
+-s start\_ip     起始ip,默认值为7.7.7.70,掩码为16位
 
-    -d destination  目的ftp服务器,默认为空
+-d destination  目的ftp服务器,默认为空
 
-    -o object       指定下载文件,默认为服务器根目录下的sos.txt;指定路径eg: sangfor/sos.txt
+-o object       指定下载文件,默认为服务器根目录下的sos.txt;指定路径eg: sangfor/sos.txt
 
-    -l loop         下载次数，默认为循环下载
+-l loop         下载次数，默认为循环下载
 
-    -f file         指定配置文件
+-f file         指定配置文件
 
-    -h help         帮助
+-h help         帮助
+```
 
+**\#范例1：跑100并发，业务网口为eth7，起始ip为7.7.7.50，ftp服务器为9.9.9.9，下载的文件为test.txt**
 
-
-**\#范例1：跑100并发，业务网口为eth7，起始ip为7.7.7.50，ftp服务器为9.9.9.9，下载的文件为test.txt**
-
-ftp-loader -t 100 -i eth7 -s 7.7.7.50 -d 9.9.9.9 -o test.txt
-
+ftp-loader -t 100 -i eth7 -s 7.7.7.50 -d 9.9.9.9 -o test.txt
 
 
-**\#范例2：50并发，下载100次默认文件sos.txt**
+
+**\#范例2：50并发，下载100次默认文件sos.txt  
+**
 
 ftp-loader -t 50 -i eth0 -s 7.7.7.50 -d 66.66.66.66 -l 100
 
-
-
-**\#范例3：复用自带模板**
+**\#范例3：复用自带模板  
+**
 
 cp /sos/case/ftp-loader.conf /sos/case/1000.conf
 
 ftp-loader -f /sos/case/1000.conf
-
-
 
 **\#注意事项  **
 
