@@ -39,13 +39,13 @@ ftp-loader -t 100 -i eth7 -s 7.7.7.50 -d 9.9.9.9 -o test.txt
 
 
 
-**\#范例2：50并发，下载100次默认文件sos.txt  
-**
+**\#范例2：50并发，下载100次默认文件sos.txt  **
 
 ftp-loader -t 50 -i eth0 -s 7.7.7.50 -d 66.66.66.66 -l 100
 
-**\#范例3：复用自带模板  
-**
+
+
+**\#范例3：复用自带模板  **
 
 cp /sos/case/ftp-loader.conf /sos/case/1000.conf
 
