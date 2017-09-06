@@ -7,7 +7,7 @@
 **\#查看帮助说明  
   ftp-loader -h**
 
-用法1-命令行方式  : ftp-loader \[tisflh\] -d ftp-server
+用法1-命令行方式  : ftp-loader \[tisolfh\] -d ftp-server
 
 用法2-指定配置文件：ftp-loader -f file
 
@@ -37,13 +37,9 @@
 
 ftp-loader -t 100 -i eth7 -s 7.7.7.50 -d 9.9.9.9 -o test.txt
 
-
-
 **\#范例2：50并发，下载100次默认文件sos.txt  **
 
 ftp-loader -t 50 -i eth0 -s 7.7.7.50 -d 66.66.66.66 -l 100
-
-
 
 **\#范例3：复用自带模板  **
 
