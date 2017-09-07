@@ -27,15 +27,13 @@ Webshell：root/sos
 增加eth1：
 编辑/etc/network/interfaces
 将对应的eth0相关内容，拷贝复制，改成eth1，并修改eth1的address、netmask、gateway(例如下方)，保存
+
 auto eth1
-
 iface eth1 inet static
-
 address 172.15.100.123
-
 netmask 255.255.255.0
-
 gateway 172.15.100.254
+
 然后执行/etc/init.d/network restart
 ```
 
@@ -82,5 +80,5 @@ set interfaces ethernet eth1 description 'INSIDE'
 
 设置DNS：
 
-`set system name-server 8.8.8.8`
+`set system name-server 8.8.8.`
 
