@@ -10,11 +10,11 @@
 
 **\#配置测试口ip**
 
-ifconfig eth1 66.67.67.67 netmask 255.0.0.0
+`ifconfig eth1 66.67.67.67 netmask 255.0.0.0`
 
 **\#复用自带模板**
 
-cp /sos/client/curl-loader-0.56/conf-examples/10K.conf /sos/case/1000.conf
+`cp /sos/client/curl-loader-0.56/conf-examples/10K.conf /sos/case/1000.conf`
 
 **\#修改HTTP并发配置，修改1000.conf中对应项，改为以下内容\(未列出的内容，不要删除\)，保存**
 
