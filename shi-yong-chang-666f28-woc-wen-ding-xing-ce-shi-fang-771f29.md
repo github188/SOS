@@ -2,7 +2,10 @@
 
 ## 说明：
 
-     构造ftp，cifs，http三种背景流量，间断性重启加速设备waccd进程测试，执行日志信息保存在当前目录的stability\\_log下，建议在/sos/tmp下执行。
+```
+构造ftp，cifs，http三种背景流量，间断性重启加速设备waccd进程测试，执行日志信息保存在当前目录的stability_log下，
+建议在/sos/tmp下执行。
+```
 
 ## 用法：
 
@@ -41,6 +44,4 @@
 \#以30.1.1.1为源100.0.0.1为目的，ftp，cifs，http连接数默认，指定ftp，cifs下载文件为/sangfor/1M，http下载文件为/sangfor/100KB，持续打流量且不重启加速；指定监控WOC设备地址为200.200.140.63，循环执行脚本50次
 
 stability-loader -s 30.1.1.1 -d 100.0.0.1 -o /sangfor/1M -p /sangfor/100KB -w 200.200.140.63 -n -1 -l 50
-
-
 
