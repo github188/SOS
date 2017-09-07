@@ -18,27 +18,19 @@
 
 **\#修改HTTP并发配置，修改1000.conf中对应项，改为以下内容\(未列出的内容，不要删除\)，保存**
 
-`BATCH_NAME= 1000                                 #任务名称`
-
-`CLIENTS_NUM_MAX=1000                             #并发数`
-
-`CLIENTS_NUM_START=20                             #初始化并发数`
-
-`CLIENTS_RAMPUP_INC=20                            #每秒增长数`
-
-`INTERFACE   =eth1                                #绑定网口`
-
-`NETMASK=8                                        #并发IP掩码`
-
-`IP_ADDR_MIN= 66.67.67.68                         #并发IP起始范围`
-
-`IP_ADDR_MAX= 66.167.167.167                      #并发IP结束范围`
-
-`CYCLES_NUM= 1                                    #任务执行次数，默认为-1(一直执行，直到CTRL+C)，设置为1则执行次`
-
-`URLS_NUM= 1                                      #访问的URL个数`
-
-`URL=http://66.66.66.66/index.html                #访问的URL，支持多个(设置多个URL时，URLS_NUM为URL数量`
+```
+BATCH_NAME= 1000                     #任务名称
+CLIENTS_NUM_MAX=1000                 #并发数
+CLIENTS_NUM_START=20                 #初始化并发数
+CLIENTS_RAMPUP_INC=20                #每秒增长数
+INTERFACE =eth1                      #绑定网口
+NETMASK=8                            #并发IP掩码
+IP_ADDR_MIN= 66.67.67.68             #并发IP起始范围
+IP_ADDR_MAX= 66.167.167.167          #并发IP结束范围
+CYCLES_NUM= 1                        #任务执行次数，默认为-1(一直执行，直到CTRL+C)，设置为1则执行次
+URLS_NUM= 1                          #访问的URL个数
+URL=http://66.66.66.66/index.html    #访问的URL，支持多个(设置多个URL时，URLS_NUM为URL数量
+```
 
 **\#进入/sos/tmp目录，因为在此执行，会生成测试日志**
 
