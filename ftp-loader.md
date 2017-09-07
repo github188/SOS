@@ -22,7 +22,7 @@
 
 -i interface    业务网口,默认值为eth7
 
--s start\_ip     起始ip,默认值为7.7.7.70,掩码为16位
+-s start_ip     起始ip,默认值为7.7.7.70,掩码为16位
 
 -d destination  目的ftp服务器,默认为空
 
