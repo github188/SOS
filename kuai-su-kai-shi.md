@@ -2,11 +2,11 @@
 
 #### **登录**
 
-SSH：root/sos
+`SSH：root/sos`
 
-WebUI：sos/Sangfor123
+`WebUI：sos/Sangfor123`
 
-Webshell：root/sos
+`Webshell：root/sos`
 
 #### **修改ip**
 
@@ -27,15 +27,15 @@ Webshell：root/sos
 
 将对应的eth0相关内容，拷贝复制，改成eth1，并修改eth1的address、netmask、gateway\(例如下方\)，保存
 
-auto eth1
+`auto eth1`
 
-iface eth1 inet static
+`iface eth1 inet static`
 
-address 172.15.100.123
+`address 172.15.100.123`
 
-netmask 255.255.255.0
+`netmask 255.255.255.0`
 
-gateway 172.15.100.254
+`gateway 172.15.100.254`
 
 然后执行/etc/init.d/network restart
 
