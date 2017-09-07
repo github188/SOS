@@ -118,7 +118,7 @@ UDP测试
 
 首先要介绍的命令用来启动iperf服务器监听进程以便监听客户端连接
 
-`iperf.exe -s -P 2 -i 5 -p 5999 -f k`
+`iperf -s -P 2 -i 5 -p 5999 -f k`
 
 启动iperf，-p设定监听5999端口\(默认端口是5001\)；-P设定iperf只允许两个连接；-i设定每5秒汇报一次连接情况；
 
@@ -128,7 +128,7 @@ UDP测试
 
 iperf的另一半就是客户端，用来连接到服务器监听端口
 
-`iperf.exe -c s-network1.amcs.tld -P 1 -i 5 -p 5999 -f B -t 60 -T 1`
+`iperf -c s-network1.amcs.tld -P 1 -i 5 -p 5999 -f B -t 60 -T 1`
 
 连接到一台地址为s-network1.amcs.tld的服务器，端口为5999，连接60秒并且每5秒显示一次状态，命令启动后，s-network1主机被用来进行网络性能检测
 
