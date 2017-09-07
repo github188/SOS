@@ -92,7 +92,7 @@ tc qdisc add dev eth0 root netem delay 100ms loss 1%
 tc qdisc add dev eth2 root netem delay 100ms loss 1%
 ```
 
-#### 广域网环境构建
+#### 广域网环境
 
 **在eth0口模拟100ms的时延**
 
