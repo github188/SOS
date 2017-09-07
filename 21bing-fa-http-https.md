@@ -38,7 +38,7 @@ cp /sos/client/curl-loader-0.56/conf-examples/10K.conf /sos/case/1000.conf
 
 `URLS_NUM= 1                                      #访问的URL个数`
 
-`URL=`[`http://66.66.66.66/index.html`](http://66.66.66.66/index.html)`            #访问的URL，支持多个(设置多个URL时，URLS_NUM为URL数量`
+`URL=http://66.66.66.66/index.html                #访问的URL，支持多个(设置多个URL时，URLS_NUM为URL数量`
 
 **\#进入/sos/tmp目录，因为在此执行，会生成测试日志**
 
