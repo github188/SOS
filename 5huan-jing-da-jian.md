@@ -34,17 +34,19 @@
 
 搭建DHCP：
 
-`set service dhcp-server shared-network-name 'LAN' authoritative enable`
+```
+set service dhcp-server shared-network-name 'LAN' authoritative enable
 
-`set service dhcp-server shared-network-name 'LAN' subnet '192.168.10.0/24' start '192.168.10.128' stop '192.168.10.254'`
+set service dhcp-server shared-network-name 'LAN' subnet '192.168.10.0/24' start '192.168.10.128' stop '192.168.10.254'
 
-`set service dhcp-server shared-network-name 'LAN' subnet '192.168.10.0/24' default-router '192.168.10.1'`
+set service dhcp-server shared-network-name 'LAN' subnet '192.168.10.0/24' default-router '192.168.10.1'
 
-`set service dhcp-server shared-network-name 'LAN' subnet '192.168.10.0/24' dns-server '192.168.10.1'`
+set service dhcp-server shared-network-name 'LAN' subnet '192.168.10.0/24' dns-server '192.168.10.1'
 
-`set service dhcp-server shared-network-name 'LAN' subnet '192.168.10.0/24' domain-name 'internal-net'`
+set service dhcp-server shared-network-name 'LAN' subnet '192.168.10.0/24' domain-name 'internal-net'
 
-`set service dhcp-server shared-network-name 'LAN' subnet '192.168.10.0/24' lease 86400`
+set service dhcp-server shared-network-name 'LAN' subnet '192.168.10.0/24' lease 86400
+```
 
 #### TC
 
