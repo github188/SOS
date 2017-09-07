@@ -94,8 +94,6 @@ tc qdisc add dev eth2 root netem delay 100ms loss 1%
 
 #### 广域网环境构建
 
-参考网站：[http://www.linux-foundation.org/en/Net:Netem](http://www.linux-foundation.org/en/Net:Netem)
-
 **在eth0口模拟100ms的时延**
 
 ```
