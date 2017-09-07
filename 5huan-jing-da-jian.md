@@ -1,4 +1,4 @@
-以下操作先禁用vyos模式：
+以下操作先进入vyos模式：
 
 root@SOS:~\# su vyos
 
@@ -19,8 +19,6 @@ Done
 \[edit\]
 
 vyos@SOS\#
-
-
 
 修改VyOS密码：
 
