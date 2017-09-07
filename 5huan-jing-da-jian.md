@@ -16,6 +16,14 @@ vyos@SOS# commit save
 vyos@SOS# save
 ```
 
+#### 默认服务
+
+| **默认已启动** | **端口** | 根目录 | 公共目录 |
+| :--- | :--- | :--- | :--- |
+| HTTP/HTTPS | 80/443 | /usr/share/nginx/html/ | /sangfor/ |
+| FTP | 21 | /sos/server/feitp-server/REV/ | /sangfor/ |
+| CIFS | 445 | /home/samba/test/ | /sangfor/ |
+
 #### 静态路由
 
 方法1：使用root登录或者vyos用户执行sudo
