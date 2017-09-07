@@ -54,3 +54,41 @@ gateway 172.15.100.254
 **执行：cp /etc/resolv.conf /etc/bak.resolv.conf.bak  
 （务必要执行，未执行重启后会被恢复为8.8.8.8）**
 
+以下操作先进入vyos模式：
+
+`root@SOS:~# su - vyos`
+
+`vyos@SOS:~$ configure`
+
+`vyos@SOS# commit save`
+
+`vyos@SOS# save`
+
+修改VyOS密码：
+
+`set system login user vyos authentication plaintext-password {yourpassword}`
+
+设置ssh登录、端口：
+
+`set service ssh allow-root`
+
+`set service ssh port 22`
+
+设置默认网关：
+
+`set system gateway-address 200.200.143.254`
+
+设置DNS：
+
+`set system name-server 8.8.8.8`
+
+配置网口IP地址：
+
+`set interfaces ethernet eth0 address dhcp`
+
+`set interfaces ethernet eth0 description 'OUTSIDE'`
+
+`set interfaces ethernet eth1 address '192.168.0.1/24'`
+
+`set interfaces ethernet eth1 description 'INSIDE'`
+

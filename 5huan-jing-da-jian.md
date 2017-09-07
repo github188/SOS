@@ -1,54 +1,8 @@
 # 常用环境构建
 
-以下操作先进入vyos模式：
 
-root@SOS:~\# su vyos
 
-vyos@SOS:/root$ config
-
-设置完成后commit并save
-
-vyos@SOS\# commit
-
-\[edit\]
-
-vyos@SOS\# save
-
-Saving configuration to '/config/config.boot'...
-
-Done
-
-\[edit\]
-
-vyos@SOS\#
-
-修改VyOS密码：
-
-`set system login user vyos authentication plaintext-password {yourpassword}`
-
-设置ssh登录、端口：
-
-`set service ssh allow-root`
-
-`set service ssh port 22`
-
-设置默认网关：
-
-`set system gateway-address 200.200.143.254`
-
-设置DNS：
-
-`set system name-server 8.8.8.8`
-
-配置网口IP地址：
-
-`set interfaces ethernet eth0 address dhcp`
-
-`set interfaces ethernet eth0 description 'OUTSIDE'`
-
-`set interfaces ethernet eth1 address '192.168.0.1/24'`
-
-`set interfaces ethernet eth1 description 'INSIDE'`
+#### 静态路由
 
 配置静态路由：
 
