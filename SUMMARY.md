@@ -10,7 +10,7 @@
 * [2.3 简洁篇 - CIFS并发](cifs-loader.md)
 * [2.4 场景篇 - VPN大并发仿真](vpn-loader.md)
 * [2.5 场景篇 - WOC稳定性测试仿真](stability-loader.md)
-* [2.6 场景篇 - 容器云多ip负载仿真](docker-loader-multi-ip.md)
+* [2.6 场景篇 - 容器云多ip负载仿真](docker-loader-multiip.md)
 * [3. 环境构建](environment_build.md)
 * [3.1 常用篇 - 基础网络环境](base-network-environment.md)
 * [3.2 高级篇 - 复杂网络环境](complicated-network-environment.md)
