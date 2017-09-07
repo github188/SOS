@@ -2,11 +2,9 @@
 
 #### OSPF
 
-\#进入vyos配置模式
+\#进入vyos配置模式，并进入配置模式
 
 `root@SOS:~# su - vyos`
-
-\#首先进入配置模式
 
 `vyos@SOS:~$ configure`
 
@@ -14,23 +12,17 @@
 
 `vyos@SOS# set protocols ospf parameters router-id 192.100.0.195`
 
-\#通告区域网络
+\#通告区域网络，并进行路由重发布
 
 `vyos@SOS# set protocols ospf area 0.0.0.0 network 192.100.0.0/16`
 
-\#通告区域网络
-
 `vyos@SOS# set protocols ospf area 0.0.0.0 network 100.100.21.0/24`
-
-\#路由重发布
 
 `vyos@SOS# set protocols ospf redistribute connected`
 
-\#保存，并生效
+\#保存，并生效，并保存为启动配置
 
 `vyos@SOS# commit save`
-
-\#保存为启动配置
 
 `vyos@SOS# save`
 
