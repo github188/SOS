@@ -1,6 +1,16 @@
 # 常用环境构建
 
+以下各环境，先进入vyos模式：
 
+`root@SOS:~# su - vyos`
+
+`vyos@SOS:~$ configure`
+
+配置好命令后，使用以下两个进行保存，重启后依然生效
+
+`vyos@SOS# commit save`
+
+`vyos@SOS# save`
 
 #### 静态路由
 
