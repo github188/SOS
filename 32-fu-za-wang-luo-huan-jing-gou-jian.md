@@ -22,11 +22,11 @@ vyos@SOS# save
 
 #### OSPF
 
-\#配置OSPF router-id（用于选取DR和BDR）
+**\#配置OSPF router-id（用于选取DR和BDR）**
 
 `vyos@SOS# set protocols ospf parameters router-id 192.100.0.195`
 
-\#通告区域网络，并进行路由重发布
+**\#通告区域网络，并进行路由重发布**
 
 ```
 vyos@SOS# set protocols ospf area 0.0.0.0 network 192.100.0.0/16
@@ -36,7 +36,7 @@ vyos@SOS# set protocols ospf area 0.0.0.0 network 100.100.21.0/24
 vyos@SOS# set protocols ospf redistribute connected
 ```
 
-\#查看所配置协议（因为前面配置了RIP协议）
+**\#查看所配置协议（因为前面配置了RIP协议）**
 
 `vyos@SOS# show protocols`
 
@@ -44,7 +44,7 @@ vyos@SOS# set protocols ospf redistribute connected
 
 #### RIP
 
-\#宣告直连网络，并进行路由重发布
+**\#宣告直连网络，并进行路由重发布**
 
 ```
 vyos@SOS# set protocols rip network 192.100.0.0/16
@@ -54,7 +54,7 @@ vyos@SOS# set protocols rip network 100.100.21.0/24
 vyos@SOS# set protocols rip redistribute connected
 ```
 
-\#查看所配置协议（因为前面配置了RIP协议）
+**\#查看所配置协议（因为前面配置了RIP协议）**
 
 `vyos@SOS# show protocols`
 
