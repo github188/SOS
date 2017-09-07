@@ -42,21 +42,21 @@
 
 **\#进入/sos/tmp目录，因为在此执行，会生成测试日志**
 
-cd /sos/tmp
+`cd /sos/tmp`
 
 **\#执行，并发任务为一直跑**
 
-curl-loader -f ../case/1000.conf
+`curl-loader -f ../case/1000.conf`
 
 **\#可以使用以下命令观察是否在跑**
 
-iftop -N -n -i eth1
+`iftop -N -n -i eth1`
 
 或者
 
 _\#建议在客户端和服务端上都执行_
 
-while :; do netstat -anp\|grep EST\|grep :80\|wc -l;sleep 1;done
+`while :; do netstat -anp|grep EST|grep :80|wc -l;sleep 1;done`
 
 #### **HTTPS并发**
 
@@ -64,19 +64,19 @@ while :; do netstat -anp\|grep EST\|grep :80\|wc -l;sleep 1;done
 
 备注：若使用sos作为服务端，则默认带HTTPS服务
 
-URL=[https://66.66.66.66/index.html](http://66.66.66.66/index.html)
+`URL=`[`https://66.66.66.66/index.html`](http://66.66.66.66/index.html)
 
-TIMER\_URL\_COMPLETION = 0
+`TIMER_URL_COMPLETION = 0`
 
-TIMER\_AFTER\_URL\_SLEEP =1000
+`TIMER_AFTER_URL_SLEEP =1000`
 
 **\#可以使用以下命令观察是否在跑**
 
-iftop -N -n -i eth1
+`iftop -N -n -i eth1`
 
 或者
 
 _\#建议在客户端和服务端上都执行_
 
-while :; do netstat -anp\|grep EST\|grep :4430\|wc -l;sleep 1;done
+`while :; do netstat -anp|grep EST|grep :4430|wc -l;sleep 1;done`
 
