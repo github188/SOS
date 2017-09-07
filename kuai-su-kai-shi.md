@@ -12,14 +12,14 @@ Webshell：root/sos
 
 #### **修改ip**
 
-默认：111.111.111.111\(eth0口\)
+```
+默认：
+111.111.111.111(eth0口)
 
 修改：
-
-修改/etc/network/interfaces  
-对应的address、netmask、gateway，保存
-
+修改/etc/network/interfaces对应的address、netmask、gateway，保存
 然后执行/etc/init.d/network restart
+```
 
 #### **增加网口**
 
@@ -68,7 +68,6 @@ vyos@SOS:~$ configure
 vyos@SOS# commit save
 
 vyos@SOS# save
-
 ```
 
 配置网口IP地址：
