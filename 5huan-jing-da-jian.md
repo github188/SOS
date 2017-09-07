@@ -1,6 +1,6 @@
 # 常用网络环境构建
 
-##### **以下各环境，先进入vyos模式：**
+##### **\#以下各环境，先进入vyos模式：**
 
 ```
 root@SOS:~# su - vyos
@@ -8,7 +8,7 @@ root@SOS:~# su - vyos
 vyos@SOS:~$ configure
 ```
 
-##### 配置好命令后，使用以下两个进行保存，重启后依然生效
+##### **\#**配置好命令后，使用以下两个进行保存，重启后依然生效
 
 ```
 vyos@SOS# commit save
@@ -26,11 +26,11 @@ vyos@SOS# save
 
 #### 静态路由
 
-**方法1：使用root登录或者vyos用户执行sudo**
+**\#方法1：使用root登录或者vyos用户执行sudo**
 
 `route add -net 192.168.20.0/24 gw 192.168.10.195`
 
-**方法2：使用configure模式的set protocols命令**
+**\#方法2：使用configure模式的set protocols命令**
 
 `set protocols static route 192.168.20.0/24 next-hop 192.168.10.195 distance '1'`
 
@@ -56,7 +56,7 @@ set service dhcp-server shared-network-name 'LAN' subnet '192.168.10.0/24' lease
 
 #### 流控
 
-**首先新增两个流控策略**
+**\#首先新增两个流控策略**
 
 ```
 set traffic-policy shaper WAN-OUT bandwidth '50Mbit'
@@ -76,7 +76,7 @@ set traffic-policy shaper LAN-OUT default ceiling '100%'
 set traffic-policy shaper LAN-OUT default queue-type 'fair-queue'
 ```
 
-**将策略应用到网口**
+**\#将策略应用到网口**
 
 ```
 set interfaces ethernet eth2 traffic-policy out 'WAN-OUT'
@@ -84,7 +84,7 @@ set interfaces ethernet eth2 traffic-policy out 'WAN-OUT'
 set interfaces ethernet eth0 traffic-policy out 'LAN-OUT'
 ```
 
-**设置延时和丢包（延时100ms、丢包1%）**
+**\#设置延时和丢包（延时100ms、丢包1%）**
 
 ```
 tc qdisc add dev eth0 root netem delay 100ms loss 1%
@@ -94,56 +94,56 @@ tc qdisc add dev eth2 root netem delay 100ms loss 1%
 
 #### 广域网环境
 
-**在eth0口模拟100ms的时延**
+**\#在eth0口模拟100ms的时延**
 
 ```
 tc qdisc add dev eth0 root netem delay 100ms
 ```
 
-**删除在eth0口设置的时延**
+**\#删除在eth0口设置的时延**
 
 ```
 tc qdisc del dev eth0 root netem delay XXXms
 ```
 
-**在eth0口模拟100ms＋－10ms（随机分布）的时延**
+**\#在eth0口模拟100ms＋－10ms（随机分布）的时延**
 
 ```
 tc qdisc change dev eth0 root netem delay 100ms 10ms 25%
 tc qdisc change dev eth0 root netem delay 100ms 10ms
 ```
 
-**在eth0口模拟时延，在100ms＋－10ms之间的正态分布**
+**\#在eth0口模拟时延，在100ms＋－10ms之间的正态分布**
 
 ```
 tc qdisc change dev eth0 root netem delay 100ms 10ms distribution normal
 ```
 
-**在eth0口模拟丢包（丢包率为0.1％）**
+**\#在eth0口模拟丢包（丢包率为0.1％）**
 
 ```
 tc qdisc change dev eth0 root netem loss 0.1%
 ```
 
-**在eth0口模拟丢包（丢包率为0.1％－33.33％之间随机分布）**
+**\#在eth0口模拟丢包（丢包率为0.1％－33.33％之间随机分布）**
 
 ```
 tc qdisc change dev eth0 root netem loss 0.3% 33.33%
 ```
 
-**在eth0口模拟数据包重传（重传率为1％）**
+**\#在eth0口模拟数据包重传（重传率为1％）**
 
 ```
 tc qdisc change dev eth0 root netem duplicate 1%
 ```
 
-**在eth0口模拟数据失真\(数据能传过去，但数据错误）**
+**\#在eth0口模拟数据失真\(数据能传过去，但数据错误）**
 
 ```
 tc qdisc change dev eth0 root netem corrupt 0.1%
 ```
 
-**在eth0口模拟重新请求数据包**
+**\#在eth0口模拟重新请求数据包**
 
 ```
 tc qdisc change dev eth0 root netem gap 5 delay 10ms 
@@ -155,14 +155,14 @@ tc qdisc change dev eth0 root netem delay 10ms reorder 25% 50%
 备注：25％-50％的数据包会被立即发送，其余的延时10ms再发送，这种可以模拟乱序的情况
 ```
 
-**模拟传输速率**
+**\#模拟传输速率**
 
 ```
 # tc qdisc add dev eth0 root handle 1:0 netem delay 100ms
 # tc qdisc add dev eth0 parent 1:1 handle 10: tbf rate 256kbit buffer 1600 limit 3000
 ```
 
-**原理**
+**\#原理**
 
 ```
 对互联网而言，一切都是数据包，操控网络实际上是在操控数据包，操控它如何产生，路由，传输，分片等等。
