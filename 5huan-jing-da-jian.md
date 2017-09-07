@@ -26,11 +26,11 @@ vyos@SOS# save
 
 #### 静态路由
 
-方法1：使用root登录或者vyos用户执行sudo
+**方法1：使用root登录或者vyos用户执行sudo**
 
 `route add -net 192.168.20.0/24 gw 192.168.10.195`
 
-方法2：使用configure模式的set protocols命令
+**方法2：使用configure模式的set protocols命令**
 
 `set protocols static route 192.168.20.0/24 next-hop 192.168.10.195 distance '1'`
 
@@ -56,9 +56,7 @@ set service dhcp-server shared-network-name 'LAN' subnet '192.168.10.0/24' lease
 
 #### **TC**
 
-TC流量控制功能：
-
-（1）首先新增两个流量策略：
+**首先新增两个流控策略**
 
 ```
 set traffic-policy shaper WAN-OUT bandwidth '50Mbit'
@@ -78,7 +76,7 @@ set traffic-policy shaper LAN-OUT default ceiling '100%'
 set traffic-policy shaper LAN-OUT default queue-type 'fair-queue'
 ```
 
-（2）将增加的策略应用到网口上：
+**将策略应用到网口**
 
 ```
 set interfaces ethernet eth2 traffic-policy out 'WAN-OUT'
@@ -86,7 +84,7 @@ set interfaces ethernet eth2 traffic-policy out 'WAN-OUT'
 set interfaces ethernet eth0 traffic-policy out 'LAN-OUT'
 ```
 
-（3）设置延时和丢包（延时100ms、丢包1%）：
+**设置延时和丢包（延时100ms、丢包1%）**
 
 ```
 tc qdisc add dev eth0 root netem delay 100ms loss 1%
