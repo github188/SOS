@@ -16,7 +16,7 @@ vyos@SOS# commit save
 vyos@SOS# save
 ```
 
-##### 静态路由
+#### 静态路由
 
 方法1：使用root登录或者vyos用户执行sudo
 
@@ -26,11 +26,11 @@ vyos@SOS# save
 
 `set protocols static route 192.168.20.0/24 next-hop 192.168.10.195 distance '1'`
 
-##### VLAN
+#### VLAN
 
 `set interfaces ethernet eth0 vif 10 address 192.168.10.196/24`
 
-##### DHCP
+#### DHCP
 
 ```
 set service dhcp-server shared-network-name 'LAN' authoritative enable
@@ -46,7 +46,7 @@ set service dhcp-server shared-network-name 'LAN' subnet '192.168.10.0/24' domai
 set service dhcp-server shared-network-name 'LAN' subnet '192.168.10.0/24' lease 86400
 ```
 
-**TC**
+#### **TC**
 
 TC流量控制功能：
 
