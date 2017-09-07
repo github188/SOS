@@ -1,2 +1,2 @@
-待更新
+![](/assets/SOS_logo_mini.png)
 
