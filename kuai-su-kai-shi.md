@@ -10,12 +10,6 @@ WebUI：sos/Sangfor123
 Webshell：root/sos
 ```
 
-`SSH：root/sos`
-
-`WebUI：sos/Sangfor123`
-
-`Webshell：root/sos`
-
 #### **修改ip**
 
 默认：111.111.111.111\(eth0口\)
