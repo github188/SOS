@@ -2,8 +2,9 @@
 
 * [介绍](README.md)
 * [一键升级\(Update\)](Update.md)
-* [1. 功能支持](gong-neng-zhi-chi.md)
-* [2. 快速开始](kuai-su-kai-shi.md)
+* [功能支持](gong-neng-zhi-chi.md)
+* [1. 快速开始](kuai-su-kai-shi.md)
+  * 2. 并发打流
 * [2.1 HTTP/HTTPS并发](21bing-fa-http-https.md)
 * [2.2 FTP并发](22-ftpbing-fa.md)
 * [2.3 CIFS并发](23-cifsbing-fa.md)
