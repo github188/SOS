@@ -2,7 +2,7 @@
 
 * [介绍](README.md)
 * [一键升级\(Update\)](Update.md)
-* [功能支持](gong-neng-zhi-chi.md)
+* [功能支持\(Feature\)](gong-neng-zhi-chi.md)
 * [1. 快速开始](kuai-su-kai-shi.md)
 * [2. 并发打流](kai-fa-wei-62a428-develop/1.md)
 * [2.1 简洁篇 - HTTP/HTTPS并发](21bing-fa-http-https.md)
@@ -23,10 +23,10 @@
 * [4.6 SangforTool使用](sangfortool.md)
 * [4.7 isic使用](isicshi-yong.md)
 * [4.8 tshark使用](49tsharkchang-yong-gong-neng.md)
-* [新特性尝鲜\(feature\)](xin-te-xing-chang-9c9c28-feature.md)
-* [体验监控 - ntopng\(Netflow\)](xin-te-xing-chang-9c9c28-feature/ti-yan-jian-kong-ntopng.md)
+* [5. 开发维护](kai-fa-wei-62a428-develop.md)
+* [5.1 脚本规范](kai-fa-wei-62a428-develop/jiao-ben-gui-fan.md)
+* [6. 试用特性](xin-te-xing-chang-9c9c28-feature.md)
+* [6.1 体验监控 - ntopng\(Netflow\)](xin-te-xing-chang-9c9c28-feature/ti-yan-jian-kong-ntopng.md)
 * [常见问题\(Q&A\)](chang-jian-wen-989828-q-and-a.md)
 * [已知缺陷\(issue\)](yi-zhique-967728-issue.md)
-* [脚本规范](kai-fa-wei-62a428-develop/jiao-ben-gui-fan.md)
-* [开发维护\(develop\)](kai-fa-wei-62a428-develop.md)
 
