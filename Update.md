@@ -2,7 +2,7 @@
 
 ---
 
-#### **首次升级：一键升级**
+#### 首次升级：一键升级
 
 支持版本：SOS \(v0.0.1 Beta\)
 
@@ -14,7 +14,7 @@ Are you sure you want to continue connecting \(yes/no\)? yes
 
 ---
 
-#### **以后升级：一键升级**
+#### 以后升级：一键升级
 
 支持版本：SOS \(v0.0.2 Beta\)之后所有版本
 

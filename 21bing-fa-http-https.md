@@ -2,7 +2,7 @@
 
 ---
 
-#### **HTTP并发**
+#### HTTP并发
 
 需求：1000并发\(此为演示，实际并发支持很高\)
 
@@ -50,7 +50,7 @@ curl-loader -f ../case/1000.conf
 
 `while :; do netstat -anp|grep EST|grep :80|wc -l;sleep 1;done`
 
-#### **HTTPS并发**
+#### HTTPS并发
 
 **\#完全按照HTTP并发步骤，只需要将1000.conf基础上的对应项，改为以下内容，执行即可**
 

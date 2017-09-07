@@ -1,8 +1,8 @@
-# **ntopng**
+## 体验监控 - ntopng\(Netflow\)
 
 ---
 
-**ntopng安装使用说明**
+#### **ntopng安装使用说明**
 
 （1）如果没有安装（下一个版本默认安装），请查看官方提供的安装方式：[http://packages.ntop.org/apt-stable/](http://packages.ntop.org/apt-stable/)
 
@@ -12,7 +12,7 @@
 
 （4）登录页面：{设备IP地址}:3000  （如果没有使用-l参数，请输入账号密码：admin/admin）
 
-**ntopng.conf配置文件常用参数解释**
+#### **ntopng.conf配置文件常用参数解释**
 
 * 只监控指定的网口的流量
 
@@ -38,5 +38,7 @@
   --packet-filter|-B "dst port 80"   (就是常用的tcpdump的过滤方法)
   ```
 
-**ntopng详情页面截图**![](/assets/ntopng详情页面截图.png)
+#### **ntopng详情页面截图**![](/assets/ntopng详情页面截图.png)
+
+
 

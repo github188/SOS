@@ -2,7 +2,7 @@
 
 ---
 
-#### **登录**
+#### 登录
 
 ```
 SSH：root/sos
@@ -12,7 +12,7 @@ WebUI：sos/Sangfor123
 Webshell：root/sos
 ```
 
-#### **修改ip**
+#### 修改ip
 
 ```
 默认：
@@ -25,7 +25,7 @@ Webshell：root/sos
 建议eth0作为管理口,其他口作为打流口)
 ```
 
-#### **增加网口**
+#### 增加网口
 
 ```
 增加eth1：
@@ -41,7 +41,7 @@ gateway 172.15.100.254
 然后执行/etc/init.d/network restart
 ```
 
-#### **DNS修改**
+#### DNS修改
 
 ```
 默认：
