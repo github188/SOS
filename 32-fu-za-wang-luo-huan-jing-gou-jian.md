@@ -44,23 +44,29 @@ vyos@SOS# save
 
 \#进入vyos配置模式，并进入配置模式
 
-`root@SOS:~# su - vyos`
+```
+root@SOS:~# su - vyos
 
-`vyos@SOS:~$ configure`
+vyos@SOS:~$ configure
+```
 
 \#宣告直连网络，并进行路由重发布
 
-`vyos@SOS# set protocols rip network 192.100.0.0/16`
+```
+vyos@SOS# set protocols rip network 192.100.0.0/16
 
-`vyos@SOS# set protocols rip network 100.100.21.0/24`
+vyos@SOS# set protocols rip network 100.100.21.0/24
 
-`vyos@SOS# set protocols rip redistribute connected`
+vyos@SOS# set protocols rip redistribute connected
+```
 
 \#保存，并生效，并保存为启动配置
 
-`vyos@SOS# commit save`
+```
+vyos@SOS# commit save
 
-`vyos@SOS# save`
+vyos@SOS# save
+```
 
 \#查看所配置协议（因为前面配置了RIP协议）
 
