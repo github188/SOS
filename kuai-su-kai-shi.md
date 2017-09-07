@@ -2,6 +2,14 @@
 
 #### **登录**
 
+```
+SSH：root/sos
+
+WebUI：sos/Sangfor123
+
+Webshell：root/sos
+```
+
 `SSH：root/sos`
 
 `WebUI：sos/Sangfor123`
