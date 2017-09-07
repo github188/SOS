@@ -19,6 +19,8 @@ Webshell：root/sos
 修改：
 修改/etc/network/interfaces对应的address、netmask、gateway，保存
 然后执行/etc/init.d/network restart
+
+建议eth0作为管理口,其他口作为打流口)
 ```
 
 #### **增加网口**
