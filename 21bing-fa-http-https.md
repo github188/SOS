@@ -8,14 +8,14 @@
 
 步骤：
 
-**配置测试口ip，并复用自带模板**
+\#**配置测试口ip，并复用自带模板**
 
 ```
 ifconfig eth1 66.67.67.67 netmask 255.0.0.0
 cp /sos/client/curl-loader-0.56/conf-examples/10K.conf /sos/case/1000.conf
 ```
 
-**修改HTTP并发配置，修改1000.conf中对应项，改为以下内容\(未列出的内容，不要删除\)，保存**
+\#**修改HTTP并发配置，修改1000.conf中对应项，改为以下内容\(未列出的内容，不要删除\)，保存**
 
 ```
 BATCH_NAME= 1000                     #任务名称
@@ -44,15 +44,15 @@ curl-loader -f ../case/1000.conf
 
 或者
 
-_\#建议在客户端和服务端上都执行_
+**\#建议在客户端和服务端上都执行**
 
 `while :; do netstat -anp|grep EST|grep :80|wc -l;sleep 1;done`
 
 #### **HTTPS并发**
 
-**完全按照HTTP并发步骤，只需要将1000.conf基础上的对应项，改为以下内容，执行即可**
+**\#完全按照HTTP并发步骤，只需要将1000.conf基础上的对应项，改为以下内容，执行即可**
 
-备注：若使用sos作为服务端，则默认带HTTPS服务
+**\#备注：若使用sos作为服务端，则默认带HTTPS服务**
 
 ```
 URL=https://66.66.66.66/index.html
@@ -66,7 +66,7 @@ TIMER_AFTER_URL_SLEEP =1000
 
 或者
 
-_\#建议在客户端和服务端上都执行_
+**\#建议在客户端和服务端上都执行**
 
 `while :; do netstat -anp|grep EST|grep :4430|wc -l;sleep 1;done`
 
