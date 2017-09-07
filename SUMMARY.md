@@ -1,9 +1,9 @@
 # Summary
 
 * [介绍](README.md)
-* [一键升级\(Update\)](Update.md)
-* [功能支持\(Feature\)](gong-neng-zhi-chi.md)
-* [1. 快速开始](kuai-su-kai-shi.md)
+* [1.1 快速开始\(Quick Start\)](kuai-su-kai-shi.md)
+* [1.2 一键升级\(Update\)](Update.md)
+* [1.3 功能支持\(Feature\)](Feature.md)
 * [2. 并发打流](kai-fa-wei-62a428-develop/1.md)
 * [2.1 简洁篇 - HTTP/HTTPS并发](21bing-fa-http-https.md)
 * [2.2 简洁篇 - FTP并发](22-ftpbing-fa.md)
