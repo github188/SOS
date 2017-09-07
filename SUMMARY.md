@@ -27,4 +27,5 @@
 * [已知缺陷\(issue\)](yi-zhique-967728-issue.md)
 * [脚本规范](kai-fa-wei-62a428-develop/jiao-ben-gui-fan.md)
 * [开发维护\(develop\)](kai-fa-wei-62a428-develop.md)
+* 3. 环境搭建
 
