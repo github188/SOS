@@ -1,5 +1,7 @@
 ## curl-loader使用
 
+---
+
 curl-loader（也被称为“omes-NIK”和“davilka”）一个功能强大的C语言应用程序测试和负载生成工具。
 
 它支持HTTP，FTP和TLS / SSL协议，支持模拟每个具有自己的IP地址的数万个用户/客户端。
@@ -50,5 +52,5 @@ GitHub：[https://github.com/aschepis/curl-loader](https://github.com/aschepis/c
 
 官网：[http://curl-loader.sourceforge.net/](http://curl-loader.sourceforge.net/)
 
-详细解答：http://curl-loader.sourceforge.net/doc/faq.html
+详细解答：[http://curl-loader.sourceforge.net/doc/faq.html](http://curl-loader.sourceforge.net/doc/faq.html)
 
