@@ -11,6 +11,7 @@
 * [2.5 场景篇 - WOC稳定性测试仿真](shi-yong-chang-666f28-woc-wen-ding-xing-ce-shi-fang-771f29.md)
 * [2.6 场景篇 - 容器云多ip负载仿真](shi-yong-chang-666f28-rong-qi-4e913a-duo-ip-fu-zai-chang-666f29.md)
 * [3.1 常用环境搭建](5huan-jing-da-jian.md)
+  * 3. 环境搭建
 * [5.1 广域网环境 - TC](51-tcshi-752828-guang-yu-wang-mo-62df29.md)
 * [4. 工具介绍](gong-ju-jie-shao.md)
 * [4.1 curl-loader使用](curl-loadershi-yong.md)
@@ -27,5 +28,4 @@
 * [已知缺陷\(issue\)](yi-zhique-967728-issue.md)
 * [脚本规范](kai-fa-wei-62a428-develop/jiao-ben-gui-fan.md)
 * [开发维护\(develop\)](kai-fa-wei-62a428-develop.md)
-* 3. 环境搭建
 
