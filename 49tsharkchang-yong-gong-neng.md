@@ -34,13 +34,11 @@ tshark官方使用说明文档：[https://www.wireshark.org/docs/man-pages/tshar
 
 -i   指定抓包接口
 
-
-
 ## 例子：
 
 使用技巧：可以先使用wireshark过滤，得到过滤条件，然后在tshark使用
 
 su - vyos -c "/usr/bin/tshark  -2 -r test.pcap -T fields -e eth.src -e eth.dst -e ip.src -e ip.dst -e ip.proto -e tcp.flags -e tcp.options"
 
-\\只显示test.pcap报文的源目MAC地址，源目IP地址，协议，TCP标记 ，TCP选项
+只显示test.pcap报文的源目MAC地址，源目IP地址，协议，TCP标记 ，TCP选项
 
