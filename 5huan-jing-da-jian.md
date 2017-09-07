@@ -60,9 +60,13 @@ vyos@SOS\#
 
 `set protocols static route 192.168.20.0/24 next-hop 192.168.10.195 distance '1'`
 
+#### VLAN
+
 设置Vlan信息：
 
 `set interfaces ethernet eth0 vif 10 address 192.168.10.196/24`
+
+#### DHCP
 
 搭建DHCP：
 
@@ -77,6 +81,8 @@ vyos@SOS\#
 `set service dhcp-server shared-network-name 'LAN' subnet '192.168.10.0/24' domain-name 'internal-net'`
 
 `set service dhcp-server shared-network-name 'LAN' subnet '192.168.10.0/24' lease 86400`
+
+#### TC
 
 TC流量控制功能：
 
