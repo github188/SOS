@@ -13,31 +13,21 @@
 
 选项：
 
+```
 -t threads        ftp并发线程数,默认值为50,为0表示不构造ftp流量
-
 -a amount         cifs连接数,默认值为50,为0表示不构造cifs流量
-
 -q quantity       http连接数,默认值为1000,为0表示不构造http流量
-
 -n number         http流量回放执行次数,默认50次,-1表示持续回放且不重启加速
-
 -i interface      业务网口,默认值为eth1
-
--s start\_ip       起始ip,默认值为空
-
+-s start_ip       起始ip,默认值为空
 -d destination    目的服务器,默认为空
-
--o object\_ftp\_cifs  指定ftp,cifs下载文件，默认为跟目录下的sos.txt；文件大小建议100M左右
-
--p papers\_http    指定http下载文件,默认为服务器根目录下的sos.txt；文件大小建议100KB左右
-
--w woc\_ip         测试加速设备IP地址
-
+-o object_ftp_cifs  指定ftp,cifs下载文件，默认为跟目录下的sos.txt；文件大小建议100M左右
+-p papers_http    指定http下载文件,默认为服务器根目录下的sos.txt；文件大小建议100KB左右
+-w woc_ip         测试加速设备IP地址
 -l loop           脚本循环执行次数,默认-1,-1表示持续循环执行
-
 -f file           指定配置文件
-
 -h help           帮助
+```
 
 ## 举例：
 
