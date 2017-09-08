@@ -10,7 +10,7 @@
 
 **cifs-loader -h**
 
-用法1-命令行方式  : cifs-loader \[tisolfh\] -d cifs-server
+用法1-命令行方式    ：cifs-loader \[tisolfh\] -d cifs-server
 
 用法2-指定配置文件：cifs-loader -f file
 

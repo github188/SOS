@@ -9,7 +9,7 @@
 **\#查看帮助说明  
   ftp-loader -h**
 
-用法1-命令行方式  : ftp-loader \[tisolfh\] -d ftp-server
+用法1-命令行方式    ：ftp-loader \[tisolfh\] -d ftp-server
 
 用法2-指定配置文件：ftp-loader -f file
 
