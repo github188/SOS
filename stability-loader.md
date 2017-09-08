@@ -6,7 +6,9 @@
 
 ```
 构造ftp，cifs，http三种背景流量，间断性重启加速设备waccd进程测试，执行日志信息保存在当前目录的stability_log下，
-建议在/sos/tmp下执行。
+建议在/sos/tmp下执行
+用法1-命令行方式  ：stability-loader -s start_ip -d stability-server
+用法2-指定配置文件：stability-loader -f file
 ```
 
 #### 举例：
