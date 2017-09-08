@@ -188,13 +188,17 @@ done
 
 在SOS客户端下执行以下命令（重启不会保存）：
 
-echo 1048576 &gt; /proc/sys/net/core/wmem\_max
+`echo 1 > /proc/sys/net/ipv4/tcp_tw_recycle`
 
-/sbin/sysctl net.ipv4.tcp\_mem="1048576 1048576 1048576"
+`echo 1 > /proc/sys/net/ipv4/tcp_tw_reuse`
 
-echo 0 &gt; /proc/sys/net/ipv4/conf/eth1/rp\_filter
+`echo 1048576 > /proc/sys/net/core/wmem_max`
 
-echo 0 &gt; /proc/sys/net/ipv4/conf/all/rp\_filter
+`/sbin/sysctl net.ipv4.tcp_mem="1048576 1048576 1048576"`
+
+`echo 0 > /proc/sys/net/ipv4/conf/eth1/rp_filter`
+
+`echo 0 > /proc/sys/net/ipv4/conf/all/rp_filter`
 
 2、第二步
 
