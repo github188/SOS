@@ -255,9 +255,7 @@ worker_connections 65536;
 
 备份配置文件
 
-cp /etc/nginx/conf.d/default.conf  
-  /etc/nginx/conf.d/default.conf  
-.sos
+`cp /etc/nginx/conf.d/default.conf  /etc/nginx/conf.d/default.conf.sos`
 
 修改配置文件
 
