@@ -28,5 +28,5 @@
 * [6. 试用特性](Beta-feature.md)
 * [6.1 体验监控 - ntopng\(Netflow\)](Netflow-ntopng.md)
 * [常见问题\(Q&A\)](QA.md)
-* [已知缺陷\(issue\)](BUG.md)
+* [已知缺陷\(BUG\)](BUG.md)
 
