@@ -58,8 +58,6 @@ vyos@SOS# save
   -m   mac         vlan接口的mac地址，可自定义，不能物理口相同
 ```
 
-
-
 #### DHCP
 
 ```
