@@ -37,7 +37,11 @@ stability-loader -s 30.1.1.1 -d 100.0.0.1 -o /sangfor/1M -p /sangfor/100KB -w 20
 -o object_ftp_cifs  指定ftp,cifs下载文件，默认为跟目录下的sos.txt；文件大小建议100M左右
 -p papers_http    指定http下载文件,默认为服务器根目录下的sos.txt；文件大小建议100KB左右
 -w woc_ip         测试加速设备IP地址
+-r restart_acc    是否重启加速,值为‘1’重启加速,值为‘0’不重启加速,默认值为0
 -l loop           脚本循环执行次数,默认-1,-1表示持续循环执行
+-c cpu_num        指定多少个CPU负载,只针对跑HTTP流量有效,默认为0
+-m mode_debug     抓包调试模式,值为‘1’开启抓包调试模式,值为‘0’不开启抓包调试模式,默认值为0
+-f file      
 -f file           指定配置文件
 -h help           帮助
 ```
