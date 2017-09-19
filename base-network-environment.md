@@ -38,7 +38,27 @@ vyos@SOS# save
 
 #### VLAN
 
+**\#方法1：使用configure模式set interfaces命令**
+
 `set interfaces ethernet eth0 vif 10 address 192.168.10.196/24`
+
+此种方法配置的vlan，当该接口收到不带vlan\_tag的报文后会照样查路由表转发
+
+**\#方法2：使用root登录下的set-vlan命令**
+
+```
+说明：此方式配置vlan，通过修改子接口mac地址方式，解决路由器收到不带vlan_tag报文仍然查路由转发问题
+      此方式通过配置物理子接口来实现vlan功能；若在eth1口配置vlan10，会生成一个eth1.10的子接口    
+例如：添加vlan：set-vlan -c 1 -i eth1 -v 10 -a 1.1.1.1/24 -m 00:90:0b:49:22:4b
+      删除vlan：set-vlan -c 0 -i eth1 -v 10 -a 1.1.1.1/24
+  -c   configure   值为1添加vlan，值为0删除vlan
+  -i   interface   待配置vlan的物理网口
+  -v   vlan_id     vlan_id，<0-4094>
+  -a   address     vlan接口的IP地址，Example：1.1.1.1/24
+  -m   mac         vlan接口的mac地址，可自定义，不能物理口相同
+```
+
+
 
 #### DHCP
 
