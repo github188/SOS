@@ -20,7 +20,7 @@ Webshell：root/sos
 
 修改：
 修改/etc/network/interfaces对应的address、netmask、gateway，保存
-然后执行/etc/init.d/network restart
+然后执行/etc/init.d/networking restart
 
 建议eth0作为管理口,其他口作为打流口)
 ```
@@ -38,7 +38,7 @@ address 172.15.100.123
 netmask 255.255.255.0
 gateway 172.15.100.254
 
-然后执行/etc/init.d/network restart
+然后执行/etc/init.d/networking restart
 ```
 
 #### DNS修改
