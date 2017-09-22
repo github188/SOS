@@ -66,25 +66,27 @@ vyos@SOS# save
 
 用法: set-pppoe \[-c\] -i interface -s start\_ip -l last\_ip -u user -p password
 
-eg1 ：添加pppoe服务器：set-pppoe -i eth1 -s 22.22.22.22 -l 22.22.22.30 -u test -p test
+范例1 ：添加pppoe服务器：set-pppoe -i eth1 -s 22.22.22.22 -l 22.22.22.30 -u test -p test
 
-eg2 ：删除pppoe用户：set-pppoe -c -u test
+范例2 ：删除pppoe用户：set-pppoe -c -u test
 
-    -c   cancel      默认为设置pppoe，加-c为删除pppoe配置
+```
+-c   cancel      默认为设置pppoe，加-c为删除pppoe配置
 
-    -i   interface   指定侦听接口
+-i   interface   指定侦听接口
 
-    -s   start\_ip    资源池起始ip
+-s   start\_ip    资源池起始ip
 
-    -l   last\_ip     资源池终止ip
+-l   last\_ip     资源池终止ip
 
-    -u   user        本地用户名
+-u   user        本地用户名
 
-    -p   password    本地用户密码
+-p   password    本地用户密码
 
-    -d   dns-server  dns服务器，默认值为8.8.8.8
+-d   dns-server  dns服务器，默认值为8.8.8.8
 
-    -h   help        查看帮助信息
+-h   help        查看帮助信息
+```
 
 #### DHCP
 
