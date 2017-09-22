@@ -54,7 +54,9 @@ cctv-loader -f /sos/case/cctv.conf
 
 **\#注意事项  **
 
+```
 虚拟ip会从起始ip开始叠加，超过255后会从下一网段继续，注意不要和网关ip冲突
+```
 
 
 
