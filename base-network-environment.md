@@ -58,6 +58,34 @@ vyos@SOS# save
   -m   mac         vlan接口的mac地址，可自定义，不能物理口相同
 ```
 
+#### PPPOE
+
+**\#使用root用户执行set-pppoe命令**
+
+**\#查看帮助信息  set-pppoe -h**
+
+用法: set-pppoe \[-c\] -i interface -s start\_ip -l last\_ip -u user -p password
+
+eg1 ：添加pppoe服务器：set-pppoe -i eth1 -s 22.22.22.22 -l 22.22.22.30 -u test -p test
+
+eg2 ：删除pppoe用户：set-pppoe -c -u test
+
+    -c   cancel      默认为设置pppoe，加-c为删除pppoe配置
+
+    -i   interface   指定侦听接口
+
+    -s   start\_ip    资源池起始ip
+
+    -l   last\_ip     资源池终止ip
+
+    -u   user        本地用户名
+
+    -p   password    本地用户密码
+
+    -d   dns-server  dns服务器，默认值为8.8.8.8
+
+    -h   help        查看帮助信息
+
 #### DHCP
 
 ```
