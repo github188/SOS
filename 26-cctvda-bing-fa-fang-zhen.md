@@ -13,7 +13,10 @@
 **\#CCTV服务端**
 
 ```
-cctv-server
+用法:cctv-server 选项
+     start           :启动cctv-server
+     stop            :停止cctv-server
+     --help|help|-h  :显示帮助信息
 ```
 
 **\#CCTV客户端**
