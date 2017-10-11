@@ -42,14 +42,17 @@ SOS的诞生，拟提高测试能力\(仿真\)与效率，让产品质量好的�
   <tr>
     <th><b>更新</b></th>
     <th><b>方法</b></th>
+    <th><b>说明</b></th>
   </tr>
   <tr>
     <td>首次更新 </td>
     <td>curl http://200.200.192.160/install.sh |bash</td>
+    <td>只有0.0.1版本需要执行此操作，SOS更新并不会重启设备，这点不用担心</td>    
   </tr>
   <tr>
     <td>后续更新</td>
     <td>sos update</td>
+    <td>对于SOS，更新是常见的事情，养成sos update的习惯，能让您的SOS保持更好的使用体验及惊喜的功能更新</td>    
   </tr>
 </table>
 
