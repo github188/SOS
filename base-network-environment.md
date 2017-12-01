@@ -44,13 +44,13 @@ vyos@SOS# save
 
 此种方法配置的vlan，当该接口收到不带vlan\_tag的报文后会照样查路由表转发
 
-**\#方法2：使用root登录下的set-vlan命令**
+**\#方法2：使用root登录下的sos-vlan命令**
 
 ```
 说明：此方式配置vlan，通过修改子接口mac地址方式，解决路由器收到不带vlan_tag报文仍然查路由转发问题
       此方式通过配置物理子接口来实现vlan功能；若在eth1口配置vlan10，会生成一个eth1.10的子接口    
-例如：添加vlan：set-vlan -c 1 -i eth1 -v 10 -a 1.1.1.1/24 -m 00:90:0b:49:22:4b
-      删除vlan：set-vlan -c 0 -i eth1 -v 10 -a 1.1.1.1/24
+例如：添加vlan：sos-vlan -c 1 -i eth1 -v 10 -a 1.1.1.1/24 -m 00:90:0b:49:22:4b
+      删除vlan：sos-vlan -c 0 -i eth1 -v 10 -a 1.1.1.1/24
   -c   configure   值为1添加vlan，值为0删除vlan
   -i   interface   待配置vlan的物理网口
   -v   vlan_id     vlan_id，<0-4094>
@@ -60,32 +60,42 @@ vyos@SOS# save
 
 #### PPPOE
 
-**\#使用root用户执行set-pppoe命令**
-
-**\#查看帮助信息  set-pppoe -h**
-
-用法: set-pppoe \[-c\] -i interface -s start\_ip -l last\_ip -u user -p password
-
-范例1 ：添加pppoe服务器：set-pppoe -i eth1 -s 22.22.22.22 -l 22.22.22.30 -u test -p test
-
-范例2 ：删除pppoe用户：set-pppoe -c -u test
+**\#使用root用户执行sos-pppoe命令**
 
 ```
--c   cancel      默认为设置pppoe，加-c为删除pppoe配置
+用法 : sos-pppoe [-c] -i interface -s start_ip -l last_ip -g gateway_ip-u user -p password
+范例1：设置pppoe服务器：sos-pppoe -i eth1 -s 22.22.22.22 -l 22.22.22.30 -g 22.22.22.25 -u test -p test
+范例2：删除pppoe用户：sos-pppoe -c -u test
+    -c   cancel      默认为设置pppoe，加-c为删除pppoe配置
+    -i   interface   指定侦听接口
+    -s   start_ip    资源池起始ip
+    -l   last_ip     资源池终止ip
+    -g   gateway     给拨号网段分配的网关
+    -u   user        本地用户名
+    -p   password    本地用户密码
+    -d   dns-server  dns服务器，默认值为8.8.8.8
+    -h   help        查看帮助信息
+```
 
--i   interface   指定侦听接口
+#### TC
 
--s   start\_ip    资源池起始ip
+**\#使用root用户执行sos-tc命令**
 
--l   last\_ip     资源池终止ip
-
--u   user        本地用户名
-
--p   password    本地用户密码
-
--d   dns-server  dns服务器，默认值为8.8.8.8
-
--h   help        查看帮助信息
+```
+用法: sos-tc -i interface [cdDhlr]
+设置10ms延时       : sos-tc -i eth0 -d 10
+设置100ms+-10ms延时: sos-tc -i eth0 -d 100-10
+设置1%丢包         : sos-tc -i eth0 -l 1
+设置1%-3%丢包      : sos-tc -i eth0 -l 1-3
+清空eth0配置       ：sos-tc -i eth0 -r
+选项：
+    -i interface     网口,eg: eth0
+    -r recover       清除tc设置，恢复环境
+    -d delay         时延，单位ms
+    -l loss          数据包丢包率，单位%
+    -D duplicate     数据包重传率，单位%
+    -c corrupt       数据包失真率，单位%
+    -h help          帮助
 ```
 
 #### DHCP
