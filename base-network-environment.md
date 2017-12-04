@@ -2,10 +2,10 @@
 
 ---
 
-##### **\#以下各环境，先进入vyos模式：**
+##### **\#以下各环境，先进入SOS网络环境构建模式：**
 
 ```
-root@SOS:~# su - vyos
+root@SOS:~# sos netenv
 
 vyos@SOS:~$ configure
 ```
