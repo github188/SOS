@@ -36,6 +36,10 @@ vyos@SOS# save
 
 `set protocols static route 192.168.20.0/24 next-hop 192.168.10.195 distance '1'`
 
+**\#方法3：修改/etc/network/interfaces，保存，重启网络**
+
+`up route add -net 192.168.20.0/24 gw 192.168.10.195`
+
 #### VLAN
 
 **\#方法1：使用configure模式set interfaces命令**
