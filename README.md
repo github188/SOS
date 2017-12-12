@@ -68,6 +68,15 @@ SOS的诞生，拟大幅提高测试能力\(仿真\)与效率，让产品质量�
 | 在线文档 | [SOS GitBook](https://testsos.gitbooks.io/sos/content/) |
 | 离线文档 | [SOS.PDF](http://200.200.192.160/sangfor/sos.pdf) |
 
+## 定时任务
+
+SOSc除了可以管理SOS自己的定时任务，还可以用来调度Windows/Linux进行定时任务，只要把以下程序在对应系统运行，在SOS中加入管理即可！
+
+| **系统** | **下载** | **说明** |
+| :--- | :--- | :--- |
+| Linux | [下载](http://200.200.192.160/sangfor/SOS/gocron/gocron-node) | ./gocron-node & |
+| Windows | [下载](http://200.200.192.160/sangfor/SOS/gocron/gocron-node.exe) |  gocron-node.exe |
+
 
 ## 版本更新
 
