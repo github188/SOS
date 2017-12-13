@@ -20,39 +20,37 @@ vyos@SOS# save
 
 #### WCCP
 
-**\#使用模拟器允许cisco镜像实现**
+**\#在加速等产品配置好WCCP后，然后在SOS配置cisco的WCCP**
 
-root@SOS:~\# cisco -r       \#按照提示一步步配置直到进入 “Router&gt;”
+```
+root@SOS:~# cisco -r       #按照提示一步步配置直到进入 “Router>”
+```
 
 **\#思科配置命令**
 
-Router&gt;enable
+```
 
-Router\#configureterminal      \#进入配置模式
+Router>enable
+Router#configure terminal
+Router(config)#ip routing
+Router(config)#ip wccp version 2
+Router(config)#ip access-list extended wccp_acl #配置ACL，命名为wccp_acl
+Router(config-ext-nacl)#permit tcp any any #配置该条ACL的匹配的源目流量
+Router(config-ext-nacl)#exit
+Router(config)#ip wccp 66 redirect-list wccp_acl password sos #创建wccp id组66，对list wccp_acl生效，密码设置为sos
+Router(config)#interface fastEthernet 0/0
+Router(config-if)#ip wccp 66 redirect in #该wccp组重定向从0/0口进来的数据包
+Router(config-if)#no shutdown
+Router(config-if)#exit
+Router(config)#exit
+Router#write
+```
 
-Enterconfigurationcommands,oneperline.EndwithCNTL/Z.
+**\#查看wccp状态**
 
-Router\(config\)\# ip access-list extended 195  \#配置ACL，命名为195
-
-Router\(config-ext-nacl\)\#permit tcp xx.xx.xx.xx 0.0.0.255 yy.yy.yy.yy 0.0.0.255 \#配置该条ACL的匹配的源目流量
-
-Router\(config\)\#ip wccp 70 redirect-list 195 password 123  \#创建一个id组为70，对list195生效、连接密码为123的wccp配置
-
-Router\(config\)\#interfacefastEthernet0/0
-
-Router\(config-if\)\#ip wccp 70 redirect in  \#该wccp组重定向从0/0口进来的数据包
-
-Router\(config-if\)\#exit
-
-Router\(config\)\#interfacefastEthernet1/0
-
-Router\(config-if\)\#ip wccp 70 redirect out  \#该wccp组将数据包从1/0口重定向出去
-
-Router\(config-if\)\#end
-
-Router\#
-
-Router\#write
+```
+Router#show ip wccp 66 detail
+```
 
 #### OSPF
 
