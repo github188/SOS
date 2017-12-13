@@ -10,7 +10,7 @@ root@SOS:~# sos netenv
 vyos@SOS:~$ configure
 ```
 
-##### **\#**配置好命令后，使用以下两个进行保存，重启后依然生效
+##### **\#所有**配置，在配置好命令后，使用以下两个进行保存，重启后依然生效
 
 ```
 vyos@SOS# commit save
@@ -103,6 +103,16 @@ vyos@SOS# save
 ```
 
 #### DHCP
+
+**\#先给dhcp服务对应的网口\(例如eth1\)，配置好ip和双工模式**
+
+```
+set interfaces ethernet eth1 address 192.168.10.127/24
+
+set interfaces ethernet eth1 duplex auto
+```
+
+**\#再配置DHCP服务相关参数**
 
 ```
 set service dhcp-server shared-network-name 'LAN' authoritative enable
