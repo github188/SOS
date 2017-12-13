@@ -20,7 +20,39 @@ vyos@SOS# save
 
 #### WCCP
 
-**待更新**
+**\#使用模拟器允许cisco镜像实现**
+
+root@SOS:~\# cisco -r       \#按照提示一步步配置直到进入 “Router&gt;”
+
+**\#思科配置命令**
+
+Router&gt;enable
+
+Router\#configureterminal      \#进入配置模式
+
+Enterconfigurationcommands,oneperline.EndwithCNTL/Z.
+
+Router\(config\)\# ip access-list extended 195  \#配置ACL，命名为195
+
+Router\(config-ext-nacl\)\#permit tcp xx.xx.xx.xx 0.0.0.255 yy.yy.yy.yy 0.0.0.255 \#配置该条ACL的匹配的源目流量
+
+Router\(config\)\#ip wccp 70 redirect-list 195 password 123  \#创建一个id组为70，对list195生效、连接密码为123的wccp配置
+
+Router\(config\)\#interfacefastEthernet0/0
+
+Router\(config-if\)\#ip wccp 70 redirect in  \#该wccp组重定向从0/0口进来的数据包
+
+Router\(config-if\)\#exit
+
+Router\(config\)\#interfacefastEthernet1/0
+
+Router\(config-if\)\#ip wccp 70 redirect out  \#该wccp组将数据包从1/0口重定向出去
+
+Router\(config-if\)\#end
+
+Router\#
+
+Router\#write
 
 #### OSPF
 
