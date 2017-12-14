@@ -64,12 +64,6 @@ TIMER_URL_COMPLETION = 0
 TIMER_AFTER_URL_SLEEP =1000
 ```
 
-**\#可以使用以下命令观察是否在跑**
-
-`iftop -N -n -i eth1`
-
-或者
-
 **\#查看连接数：建议在客户端和服务端上都执行**
 
 ```
