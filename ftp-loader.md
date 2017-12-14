@@ -69,7 +69,7 @@ cat /sos/tmp/ftp-loader-日期.error
 _**\#建议在客户端和服务端上都执行**_
 
 ```
-while :; do netstat -anp|grep EST|grep :21|wc -l;sleep 1;done
+net-monitor
 ```
 
 
