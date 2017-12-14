@@ -48,7 +48,7 @@ curl-loader -f ../case/1000.conf
 
 **\#建议在客户端和服务端上都执行**
 
-`while :; do netstat -anp|grep EST|grep :80|wc -l;sleep 1;done`
+`net-monitor`
 
 #### HTTPS并发
 
@@ -70,5 +70,5 @@ TIMER_AFTER_URL_SLEEP =1000
 
 **\#建议在客户端和服务端上都执行**
 
-`while :; do netstat -anp|grep EST|grep :4430|wc -l;sleep 1;done`
+`net-monitor`
 
