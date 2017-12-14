@@ -60,9 +60,12 @@ Enter configuration commands, one per line.  End with CNTL/Z.
 Router(config)#line console 0
 Router(config-line)#exec-timeout 0 0
 Router(config-line)#no logging console
-Router(config)#no ip domain-lookup 
-
+Router(config)#no ip domain-lookup
 ```
+
+**\#备注：以上优化方法可以测试WCCP功能和简易的加速效果，但若实在要测试指标数据，建议使用真实cisco WCCP设备，或可通过将WCCP路由器到server端增加延时和带宽限制，来减慢广域网传输效率，来达到对比测试效果**
+
+
 
 #### OSPF
 
