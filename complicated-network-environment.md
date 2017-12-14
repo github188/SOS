@@ -51,6 +51,19 @@ Router#write
 Router#show ip wccp 66 detail
 ```
 
+**\#若需要验证加速效果，因WCCP较耗性能会有瓶颈，需要做一下优化设置**
+
+```
+Router#config
+Configuring from terminal, memory, or network [terminal]? 
+Enter configuration commands, one per line.  End with CNTL/Z.
+Router(config)#line console 0
+Router(config-line)#exec-timeout 0 0
+Router(config-line)#no logging console
+Router(config)#no ip domain-lookup 
+
+```
+
 #### OSPF
 
 **\#配置OSPF router-id（用于选取DR和BDR）**
