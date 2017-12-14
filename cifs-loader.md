@@ -56,5 +56,9 @@ cifs-loader -f /sos/case/1000.conf
 
 _**\#建议在客户端和服务端上都执行**_
 
-while :; do netstat -anp\|grep EST\|grep :445\|wc -l;sleep 1;done
+```
+net-monitor
+```
+
+
 
