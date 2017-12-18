@@ -40,6 +40,23 @@ vyos@SOS# save
 
 `up route add -net 192.168.20.0/24 gw 192.168.10.195`
 
+#### 策略路由
+
+**\#使用vyos用户configure模式的set命令**
+
+```
+ set policy route FILTER-WEB rule 1000 destination port 80 
+ #设置策略路由FILTER-WEB匹配数据包的目的端口是80
+ set policy route FILTER-WEB rule 1000 protocol tcp
+ #设置策略路由FILTER-WEB匹配的协议是TCP
+ set policy route FILTER-WEB rule 1000 set table 100
+ #将策略路由FILTER-WEB加到100表
+ set protocols static table 100 route 0.0.0.0/0 next-hop 10.255.0.2
+ #设置策略路由FILTER-WEB的下一跳为10.255.0.2
+ set interfaces ethernet eth1 policy route FILTER-WEB
+ #将策略路由FILTER-WEB应用到eth1口
+```
+
 #### VLAN
 
 **\#方法1：使用configure模式set interfaces命令**
