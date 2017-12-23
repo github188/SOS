@@ -86,7 +86,8 @@ vyos@SOS# save
 ```
 用法 : sos-pppoe [-c] -i interface -s start_ip -l last_ip -g gateway_ip-u user -p password
 范例1：设置pppoe服务器：sos-pppoe -i eth1 -s 22.22.22.22 -l 22.22.22.30 -g 22.22.22.25 -u test -p test
-范例2：删除pppoe用户：sos-pppoe -c -u test
+范例2：设置pppoe且延时为100ms：sos-pppoe -i eth1 -s 22.22.22.22 -l 22.22.22.30 -g 22.22.22.25 -u test -p test -t 100
+范例3：删除pppoe用户：sos-pppoe -c -u test
     -c   cancel      默认为设置pppoe，加-c为删除pppoe配置
     -i   interface   指定侦听接口
     -s   start_ip    资源池起始ip
@@ -95,6 +96,7 @@ vyos@SOS# save
     -u   user        本地用户名
     -p   password    本地用户密码
     -d   dns-server  dns服务器，默认值为8.8.8.8
+    -t   delay-time  侦听接口时延(ms)，默认为0
     -h   help        查看帮助信息
 ```
 
@@ -117,6 +119,40 @@ vyos@SOS# save
     -D duplicate     数据包重传率，单位%
     -c corrupt       数据包失真率，单位%
     -h help          帮助
+```
+
+#### DNS
+
+**\#使用root用户执行sos-dns命令**
+
+```
+说明: sos-dns一款便捷的dns服务器!
+
+注意: 启动服务前，请使用sos-dns -c先配置好dns记录(使用sos-dns -e查看配置事例子)
+      若启动失败，请检查是否内存不足，若是，则可以执行sos swapon开启交换分区来解决！
+用法: sos-dns 加以下参数
+选项：以下每行|分隔的参数等价
+    -s|start                    启动dns服务
+    -k|stop                     停止dns服务
+    -l|status                   查看dns服务状态
+    -c|config                   配置和查看dns记录
+    -e|example                  查看dns记录配置事例
+    -h|help                     查看帮助说明
+```
+
+#### SYSLOG
+
+**\#使用root用户执行sos-syslog命令**
+
+```
+说明： sos-syslog是采用rsyslog的syslog服务器
+
+选项：以下每行|分隔的参数等价
+    -s|--start                  启动sos-syslog服务器
+    -h|--help                   查看帮助说明
+
+例子：sos-syslog -s  启动sos-syslog服务器
+
 ```
 
 #### DHCP
