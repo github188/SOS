@@ -140,6 +140,24 @@ vyos@SOS# save
     -h|help                     查看帮助说明
 ```
 
+#### MAIL
+
+**\#使用root用户执行sos-mail命令**
+
+```
+说明: sos-mail一款便捷的邮件服务器(暂时支持smtp)!
+
+注意: 默认邮件域名为test1.sos.com，所以请在sos-dns中配置好相关记录，若要定制域名，请使用sos-mail -c定制，并同步dns服务器!
+用法: sos-mail 加以下参数
+选项：以下每行|分隔的参数等价
+    -s|start                    启动邮件服务
+    -k|stop                     启动邮件服务
+    -l|status                   查看邮件服务状态
+    -c|config                   定制邮件配置
+    -e|example                  查看邮件配置事例
+    -h|help                     查看帮助说明
+```
+
 #### SYSLOG
 
 **\#使用root用户执行sos-syslog命令**
@@ -152,7 +170,6 @@ vyos@SOS# save
     -h|--help                   查看帮助说明
 
 例子：sos-syslog -s  启动sos-syslog服务器
-
 ```
 
 #### DHCP
