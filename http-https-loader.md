@@ -37,7 +37,7 @@ URL=http://66.66.66.66/index.html    #访问的URL，支持多个(设置多个UR
 
 ```
 cd /sos/tmp
-curl-loader -f ../case/1000.conf
+curl-loader-boss -f ../case/1000.conf
 ```
 
 **\#查看连接数：建议在客户端和服务端上都执行**
@@ -50,6 +50,12 @@ net-monitor
 
 ```
 bmon -b
+```
+
+**\#注意：记得停止流量**
+
+```
+curl-loader-boss -s
 ```
 
 #### HTTPS并发
@@ -74,6 +80,12 @@ net-monitor
 
 ```
 bmon -b
+```
+
+**\#注意：记得停止流量**
+
+```
+curl-loader-boss -s
 ```
 
 
