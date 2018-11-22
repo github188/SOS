@@ -12,8 +12,9 @@ SOS的诞生，拟大幅提高测试能力\(仿真\)与效率，让产品质量�
 
 | **维度** | **使用量** | **使用产品线** | **已服务产品** | **质量产出** | **口碑** | **备注** |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| 2018-2-6 | 313台 | PR/WOC/AC/AF/SSL/AD | VPN/WOC/DOCKER/AD等 | 127个有效问题 | 待更新 | 已在VPN稳定性改进、Docker项目、WOC9.5、WOC9.1.3、产品线合入稳定性项目中运用，且当前在CASB、多产品双机专项项目中流行起来 |
+| 2018-11-22 | 783台 | PR/WOC/AC/AF/SSL/AD | VPN/WOC/DOCKER/AD等 | 127个有效问题 | 待更新 | 已在VPN稳定性改进、Docker项目、WOC9.5、WOC9.1.3、产品线合入稳定性项目中运用，且当前在CASB、多产品双机专项项目中流行起来 |
 | 最新 | [实时数据](http://200.200.194.160/Pages/Report) 或 sos -p | 无 | 无 | [BUG产出](http://200.200.192.160/sangfor/SOS/SOS_ROI.xlsx) | 待更新 | 待更新 |
+
 
 
 ## **解决什么痛点？**
@@ -43,7 +44,12 @@ SOS的诞生，拟大幅提高测试能力\(仿真\)与效率，让产品质量�
 | **安装** | **下载** | **说明** |
 | :--- | :--- | :--- |
 | 虚拟化 | [SOSOVA](http://200.200.192.160/sangfor/SOSOVA.ova) | 导入HCI或者ESXi即可 |
-| 母盘 | [SOS母盘](http://200.200.192.160/sangfor/SOSMUPAN.zip) | 使用再生龙程序进行Ghost |
+| 母盘 | [SOS母盘](http://200.200.192.160/sangfor/SOSMUPAN.zip) | 使用再生龙程序或sos的sos-clone进行Ghost |
+
+| **Docker部署** | **命令** |
+| :--- | :--- |
+| 镜像拉取 |  docker pull 200.200.1.230/sos-docker/sos-docker:sos-docker |
+| 容器启动 |  docker run --net=host --privileged=true -it 200.200.1.230/sos-docker/sos-docker:sos-docker |
 
 <table>
   <tr>
@@ -88,5 +94,7 @@ SOS除了可以管理SOS自己的定时任务，还可以用来调度Windows/Lin
 | SOS \(v0.0.2 Beta\) | 2017-08-20 | 周兴喜、朱永波、刘宜雄 | 待更新 |
 | SOS \(v0.0.2 Release\) | 2017-11-13 | 周兴喜、朱永波、刘宜雄、潘猛、陈国斌、陈凤燕、张玉杨、李秀玉、吴玉婷、李圣悦 | 待更新 |
 | SOS \(v0.0.3 Beta\) | 2017-11-15 | 周兴喜、朱永波、潘猛、陈国斌、段永强 | 待更新 |
+
+
 
 
